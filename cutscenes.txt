@@ -1,0 +1,79 @@
+$0A - Execute subroutine
+Intro uses it to launch the scrolling text intro.
+$D657->ROM:0x57D6 with bank 3 mapped on slot 1 -> ROM:0xD7D6 : Scrolling text intro subroutine.
+1 param : 
+- word : subroutine address, with bank 3 mapped on slot 1.
+
+$0C - ?
+$0C $C0 $05 $FF $DF $10 $1D $C9
+Length = 8 bytes
+
+$38 - ?
+No apparent effect when removed from cutscene ...
+No params.
+
+$2A - Initialize Entity
+Length = 3 bytes
+Params : 
+- byte : entity index
+- byte : entiy sprite
+
+$2B - Initialize entity position ? 
+Length = 5 bytes
+Params :
+- byte : entity index
+- byte : X Pos
+- byte : Y Pos
+- byte : some incremented index ? Entities with $80 index start from $0C ?
+
+$15 - Set Facing ?
+Length = 3 bytes 
+Params :
+- byte : entity index
+- byte : facing ?
+
+$43 - Load Map
+Length = 4 bytes
+Params : 
+- byte : map index
+- byte : Camera X Pos
+- byte : Camera Y Pos
+
+$4E - ?
+Length = 7 bytes
+
+$3D - ?
+Length = 7 bytes
+
+$51 - ?
+Length = 2 bytes
+
+$52 - ?
+Length = 3 bytes
+
+$53 - ?
+No params
+
+$54 - ?
+Length = 2 bytes
+
+$56 - ?
+Length = 3 bytes
+
+$04 - ?
+Length = 2 bytes
+
+$45 - ?
+Intro : music starts and map fades in after this command.
+No params.
+
+$50 - ?
+Lots of entity movement after this one, must be the move sequence command.
+Length = 23 bytes for this first intro appearance.
+
+$32 - Display portrait ?
+1 param :
+- byte : portrait index ?
+
+$00 - Display next text line ?
+No params.

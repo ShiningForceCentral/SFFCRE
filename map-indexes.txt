@@ -1,0 +1,4 @@
+
+
+$00 : Ancient Shrine
+$01 : Village

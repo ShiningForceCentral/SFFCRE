@@ -1,0 +1,15 @@
+
+Enemy indexes
+
+$00 : Blue Ooze
+$01 : Goblin
+$02 : Orcs
+$03 : Hunter Goblins
+...
+
+There may be up to 48/$30 enemy sprites.
+
+
+$30
+
+

@@ -1,0 +1,30 @@
+Address $fffc: RAM mapping and miscellaneous functions
+Bit	Function
+7	"ROM write" enable
+6-5	Unused
+4	RAM enable ($c000-$ffff)
+3	RAM enable ($8000-$bfff)
+2	RAM bank select
+1-0	Bank shift
+
+Addresses $fffd-$ffff: ROM mapping
+
+Control register	ROM bank select for slot
+$fffd	0 ($0000-$3fff)
+$fffe	1 ($4000-$7fff)
+$ffff	2 ($8000-$bfff)
+
+
+RAM:0x1ED9 : stack location of cutscene line index
+SRAM:0x232C : current cutscene line index
+ROM:0xC20A : "Read new line" subroutine
+ROM:0xC07B : "Play cutscene" subroutine
+
+ROM:0xD7CF..0xDF93 : Intro cutscene (loaded into SRAM:0xB00 by chunks of $400 bytes)
+ROM:0xDF93..0xE30C : New game cutscene before "Chapter 1" screen
+ROM:0x41491 : Battle 1 intro cutscene
+ROM:0x415FC : Battle 1 end cutscene
+
+ROM:0xC5CA : "play subroutine" for cutscene command $0A ?
+ROM:0x77BC9 : Actual subroutine reading intro text data
+ROM:0x77D02 : Intro text data
