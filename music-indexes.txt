@@ -1,0 +1,79 @@
+
+Music indexes :
+  		SFFC track                     --> SF2 track
+$00 : Fanfare                        --> TO REMAKE
+$01 : Welcome											   --> TO REMAKE, variation of SF2 ending theme introduction
+$02 : same as $01
+$03 : Legend of Light                --> $01 / Main Theme ("Wandering Warriors" / Battle Theme 2)
+$04 : Fight with the Ancient Light   --> $02 / Unpromoted Attack
+$05 : Place of Rest                  --> TO REMAKE
+$06 : Flashback                      --> TO REMAKE : extended version of $0E / Mitula's Theme with specific intro (main melody off) and beautiful extension
+$07 : Devoted Solier's Requiem       --> TO REMAKE
+$08 : Secret maneuvers               --> TO REMAKE
+$09 : Victory Road                   --> TO REMAKE
+$0A : Shining Force Gaiden 3         --> TO REMAKE
+$0B : Oh Curses										   --> $12 / "What ?!"
+$0C : Joining the Force              --> $13 / Force Join 1
+$0D : Save                           --> TO REMAKE
+$0E : Antidote                       --> $16 / Cure
+$0F : Revive                         --> TO REMAKE
+$10 : Class Change                   --> TO REMAKE
+$11 : Cursed                         --> $1A / Cursed
+$12 : Searching chest                --> TO REMAKE : available as an SFCD jingle ?
+$13 : same as $01
+$14 : Distant Journey Calls          --> $21 / Battle Theme 3 ("Ready for War")
+$15 : Frontline                      --> TO REMAKE
+$16 : Devil's Revival                --> $24 / Final Battle
+$17 : Message from Ancient Times     --> $23 / Shrine
+$18 : Dark Force                     --> $05 / Enemy Attack
+$19 : Fall of Footsteps              --> $06 / Boss Attack
+$1A : Prelude to Battle              --> TO REMAKE
+$1B : Queen of Darkness              --> TO REMAKE
+$1C : Hole in the Heart              --> $10 / Sad Theme 1 ("Dying Wishes")
+$1D : Whereabouts of fate            --> TO REMAKE
+$1E : Chaos Breaker                  --> TO REMAKE
+$1F : Peace that overflows           --> $0D / Elven Town
+
+
+SFX 
+
+$20 : Speech blip 1
+$21 : Speech blip 2
+...
+
+
+
+Original mapping from https://www.youtube.com/watch?v=X6cxYoRIcUo : 
+
+  SFFC track                      --> SF2 track
+
+1. Shining Force Gaiden 3         --> TO REMAKE
+2. Welcome                        --> TO REMAKE, variation of SF2 ending theme introduction
+3. Legend of Light                --> $01 / Main Theme ("Wandering Warriors" / Battle Theme 2)
+4. Fight with the Ancient Light   --> $02 / Unpromoted Attack
+5. Place of Rest                  --> TO REMAKE
+6. Devoted Solier's Requiem       --> TO REMAKE
+7. Secret maneuvers               --> TO REMAKE
+8. Victory Road                   --> TO REMAKE
+9. Distant Journey Calls          --> $21 / Battle Theme 3 ("Ready for War")
+10. Frontline                     --> TO REMAKE
+11. Devil's Revival               --> $24 / Final Battle
+12. Message from Ancient Times    --> $23 / Shrine
+13. Dark Force                    --> $05 / Enemy Attack
+14. Fall of Footsteps             --> $06 / Boss Attack
+15. Prelude to Battle             --> TO REMAKE
+16. Queen of Darkness             --> TO REMAKE
+17. Hole in the Heart             --> $10 / Sad Theme 1 ("Dying Wishes")
+18. Peace that overflows          --> $0D / Elven Town
+19. Flashback                     --> TO REMAKE : extended version of $0E / Mitula's Theme with specific intro (main melody off) and beautiful extension
+20. Fanfare                       --> TO REMAKE
+21. oh curses                     --> $12 / "What ?!"
+22. Joining the Force             --> $13 / Force Join 1
+23. Save                          --> TO REMAKE
+24. Antidote                      --> $16 / Cure
+25. Revive                        --> TO REMAKE
+26. Class Change                  --> TO REMAKE
+27. Cursed                        --> $1A / Cursed
+28. Searching chest               --> TO REMAKE : available as an SFCD jingle ?
+29. Whereabouts of fate           --> TO REMAKE
+30. Chaos Breaker                 --> TO REMAKE

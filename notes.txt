@@ -28,3 +28,5 @@ ROM:0x415FC : Battle 1 end cutscene
 ROM:0xC5CA : "play subroutine" for cutscene command $0A ?
 ROM:0x77BC9 : Actual subroutine reading intro text data
 ROM:0x77D02 : Intro text data
+
+ROM:0xC243 : Load sound command code ?

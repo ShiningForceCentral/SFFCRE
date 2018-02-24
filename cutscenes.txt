@@ -57,13 +57,18 @@ No params
 $54 - ?
 Length = 2 bytes
 
-$56 - ?
+$06 - Initialize text cursor ?
 Length = 3 bytes
+Params :
+- byte : line index ?
+- byte : bank index ?
 
-$04 - ?
+$04 - Sound command
 Length = 2 bytes
+Params :
+- byte : sound command
 
-$45 - ?
+$45 - Map fade in
 Intro : music starts and map fades in after this command.
 No params.
 
