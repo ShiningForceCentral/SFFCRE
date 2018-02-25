@@ -42,14 +42,21 @@ Params :
 $4E - ?
 Length = 7 bytes
 
-$3D - ?
-Length = 7 bytes
+$3D - Block copy
+Params : 
+- byte : Source X
+- byte : Source Y
+- byte : Source width
+- byte : Source height
+- byte : Dest X
+- byte : Dest Y
 
 $51 - ?
 Length = 2 bytes
 
-$52 - ?
-Length = 3 bytes
+$52 - Move sequence entity number
+Params :
+- byte : Number of entities for the next move sequence.
 
 $53 - ?
 No params
@@ -72,13 +79,108 @@ $45 - Map fade in
 Intro : music starts and map fades in after this command.
 No params.
 
-$50 - ?
-Lots of entity movement after this one, must be the move sequence command.
-Length = 23 bytes for this first intro appearance.
+$50 - Move Sequence
+- One or multiple entities declared
+- For each entity, the move sequence ended with value $C0
+Move commands to document.
 
-$32 - Display portrait ?
+$32 - Display portrait
 1 param :
-- byte : portrait index ?
+- byte : portrait index
 
-$00 - Display next text line ?
+$00 - Display next text line, then hide textbox and portrait
 No params.
+
+$1E - Set Position
+Params :
+- byte : entity index
+- byte : Pos X
+- byte : Pos Y
+
+$16 - Set Camera Destination
+Params : 
+- byte : Camera Dest X
+- byte : Camera Dest Y
+
+$14 - Wait ?
+Params : 
+- byte : Wait duration ?
+
+$02 - Display next text line
+No params.
+
+$17 - Move Entity
+Params : 
+- byte : Entity index
+- byte : Direction
+- byte : Distance
+
+$3B - Entity Pulse
+Params : 
+- byte : Entity index
+
+$3F - Flash white
+Params : 
+- byte : Number of flashes
+
+$04 - ?
+Params : 
+- byte : ? $42, $41 after white flash
+
+$3A - Entity Jump
+Params : 
+- byte : Entity index
+
+$55 - Set quake
+Params : 
+- byte : Amplitude
+
+$34 - Rotate entity
+Params : 
+- byte : Entity index
+- byte : Rotation value (90° counter-clockwise)
+
+$08 - ?
+Before Adam's intro attack
+Params : 
+- byte : ?
+- byte : ?
+- byte : ?
+
+$3C - ?
+After Adam's intro attack, screenshake
+Params : 
+- byte : $08
+- byte : $1E
+
+$36 - Rotate and shrink ?
+Params :
+- byte : Entity index
+- byte : Rotate value
+- byte : Shrink value
+
+$46 - Fade out to black
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

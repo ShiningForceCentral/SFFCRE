@@ -1,8 +1,8 @@
 
 Music indexes :
-  		SFFC track                     --> SF2 track
+      SFFC track                     --> SF2 track
 $00 : Fanfare                        --> TO REMAKE
-$01 : Welcome											   --> TO REMAKE, variation of SF2 ending theme introduction
+$01 : Welcome                        --> TO REMAKE, variation of SF2 ending theme introduction
 $02 : same as $01
 $03 : Legend of Light                --> $01 / Main Theme ("Wandering Warriors" / Battle Theme 2)
 $04 : Fight with the Ancient Light   --> $02 / Unpromoted Attack
@@ -12,7 +12,7 @@ $07 : Devoted Solier's Requiem       --> TO REMAKE
 $08 : Secret maneuvers               --> TO REMAKE
 $09 : Victory Road                   --> TO REMAKE
 $0A : Shining Force Gaiden 3         --> TO REMAKE
-$0B : Oh Curses										   --> $12 / "What ?!"
+$0B : Oh Curses	                     --> $12 / "What ?!"
 $0C : Joining the Force              --> $13 / Force Join 1
 $0D : Save                           --> TO REMAKE
 $0E : Antidote                       --> $16 / Cure
