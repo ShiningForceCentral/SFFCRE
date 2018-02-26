@@ -1,0 +1,294 @@
+<width 14></center><wrap><border 01>
+
+; Chapter 1, Battle 01 (continued)
+
+[00]You can't catch me, I won't go with you!<wait><end>
+[01]Huh...<line>Curses!<wait more><end>
+[02]I've been caught! The great Ruburan is ruined!<wait><end>
+[03]Who are you and your gang?<line>What were you doing here?<wait><end>
+[04]This guy's a heretic! He was trying to steal that ancient relic!<wait><end>
+[05]Hey! Show some respect, will you?!<line>Don't call me 'this guy'!<wait><end>
+[06]What in the world is going on lately?<line>First it's that suspicious woman, now this mechanical monster catches me!<wait><end>
+[07]Suspicious woman? Do you know what Mishaela's plan is?<wait><end>
+[08]Eh? What?<line>I don't even know the woman's name...<wait more><end>
+[09]...and I can't say I'm too thrilled about being here.<wait><end>
+[0A]Well then, what was your gang of ruffians doing here at the ancient ruins, I wonder?<wait><end>
+[0B]Wait just a minute!<line>That woman took my gang hostage.<wait more><end>
+[0C]She threatened us to bring back this ancient relic... or else!<wait><end>
+[0D]This fellow must be a criminal, trying to steal that ancient relic. We can't allow him to go.<wait more><end>
+[0E]What do you think we should do, Adam?<wait><end>
+[0F]Well, first of all we should probably return to Hassan to discuss this with the Elder.<wait><end>
+[10]That's a good idea.<line>Perhaps that suspicious woman is Mishaela.<wait more><end>
+[11]If she really is, we may be able to pick up Max's trail more easily.<wait><end>
+[12]I see your point. We should hurry back to Hassan immediately.<wait><end>
+
+; Chapter 1, Battle 02
+
+[13]Adam and the others returned triumphant to Hassan, with Ruburan as their prisoner, however... <wait><end>
+[14]I heard a sound from over there...<wait><end>
+[15]Grandpa!<wait><end>
+[16]<party leader>!<line>I'm not important, just go with Cynthia and escape!<wait><end>
+[17]<party leader> bows his head in agreement.<wait><end>
+[18]But Grandpa!<wait><end>
+[19]Quickly, catch them!<line>The old man stays with me, you take the other ones!<wait><end>
+[1A]Lynx, follow me inside.<wait><end>
+[1B]Yes, Mistress Mishaela!<wait><end>
+[1C]Hey you! Don't let them escape!<wait><end>
+[1D]Let's catch them!<wait><end>
+[1E]Cynthia, are you okay?<wait><end>
+[1F]Who in the world are these monsters?<wait><end>
+[20]I... I don't understand...<line>They came here without warning...<wait more><end>
+[21]They wanted us to hand over Grandpa!<line>Of course, we said we couldn't do that...<line>...so they started raiding our village!<wait><end>
+[22]How dare they disrupt the peace of this village?!<wait><end>
+[23]Adam, <party leader> saved me, but Grandpa is still their captive. Please save him!<wait><end>
+[24]<end> ; continues 23
+[25]I understand.<line>Right, let's begin the rescue!<wait><end>
+[26]<party leader>, we will fight alongside you.<wait><end>
+[27]<party leader> bows his head in agreement.<wait><end>
+
+[28]The vehicle at the ancient temple - are you the only one who knows how to make it move?<wait><end>
+[29]Alas! Besides myself, no one else knows about it.<wait><end>
+[2A]Grandpa!<wait><end>
+[2B]Cynthia, you're safe!<wait><end>
+[2C]Mishaela! At last we have found you!<wait><end>
+[2D]Oh it's her!<line>She's the one who's taken my men hostage!<wait><end>
+[2E]My my, if it isn't Ruburan, head of the thieves!<wait more><end>
+[2F]You're caught? What a pity.<line>Since you're of no more use to me, I wonder what will become of those hostages?!<wait><end>
+[30]Curses! What are you talking about?!<wait more><end>
+[31]The minions you sent with me were weak, that's the reason I was caught in the first place!<wait><end>
+[32]You'll have to get past me first.<wait><end>
+[33]Hey, that hurts!<wait><end>
+[34]Oh ho ho ho! Too bad for you, you fools don't know how to move the caravan.<wait more><end>
+[35]You can try as hard as you like to catch up with Max, but you won't succeed.<line>Oh ho ho ho!<wait><end>
+[36]We'll never lose to you, Mishaela, but we'll show you and your army true defeat, just like we did before.<wait><end>
+[37]<end> ; continues 36
+[38]*guffaws*<line>What? You must be joking!<wait more><end>
+[39]I, Lynx, shall defeat you pests before you have a chance.<wait><end>
+[3A]Right, Lynx! <wait><end>
+[3B]Oh ho ho ho! Very amusing!<line>I'd say that this is a futile struggle for you.<wait more><end>
+[3C]You might as well stay here. As for this old man, we've decided to take him with us.<wait more><end>
+[3D]Since you can't use the caravan, you'll have to pursue Max on foot.<wait><end>
+[3E]<party leader>! You must find Max quickly!<wait more><end>
+[3F]Fulfil your wish with him!<wait more><end>
+[40]Adam, I entrust <party leader> to you. <party leader> is the...<wait><end>
+[41]Tsk!<line>We'll hang the old man!<wait><end>
+[42]Grandpa...!<wait><end>
+[43]Try your best! I can't wait to see it! Oh ho ho!<wait><end>
+[44]This 'Max' everybody keeps talking about...<wait more><end>
+[45]It reminds me - before that woman came here, a guy named Max came here too!<wait><end>
+[46]Ruburan, is that true?<wait><end>
+[47]I can't blame you for not trusting me.<line>But, I'm a thief with dignity, not a shameless liar.<wait><end>
+[48]<party leader>, we've seen your strength now.<wait more><end>
+[49]<party leader>, please come with us to find Max.<wait><end>
+[4A]<party leader> please...<wait more><end>
+[4B]Go with Adam to find Max.<line>I'll go too, to help Grandpa.<wait><end>
+[4C]<party leader> bows his head in agreement.<wait><end>
+[4D]Adam and the others join <party leader>'s group.<delay 02><delay 02><delay 02><delay 02><delay 02><wait><end>
+[4E]<party leader>, you will be our leader.<wait><end>
+[4F]However...<wait><end>
+[50]Cynthia should remain here. It's for the best.<wait><end>
+[51]W...why? I...<line>Why can't I come along?<wait><end>
+[52]It's too dangerous.<wait more><end>
+[53]What if something were to happen to you? If we save the Elder and you're not here to welcome him, imagine how heartbroken he'll be.<wait><end>
+[54]Well, <party leader>. Let's go now!<wait><end>
+[55]But, that woman is dangerous!<line>My instincts tell me she's like a demon straight out of hell.<wait><end>
+[56]As you say, Ruburan, this is indeed a dangerous journey.<line>However we have no choice but to go.<wait more><end>
+[57]Your men are in danger too. We can't just stand by and do nothing.<line>Please lead the way, Ruburan.<wait><end>
+[58]...<delay 02><line>Alright then, everybody follow me!<wait><end>
+
+; Chapter 1, Battle 03
+
+[59]This place is dangerous... it's crawling with monsters.<wait more><end>
+[5A]They outnumber us by far... we should make this quick then hurry to my secret hideout.<wait><end>
+[5B]<party leader>, as Ruburan said, let's make haste.<wait><end>
+[5C]Hehehe!<line>It looks like our victims have arrived!<wait more><end>
+[5D]Capture them all!<wait><end>
+[5E]Heh.<line>I absolutely hate these guys!<line>This could be dangerous...<wait><end>
+
+[5F]That was easy, wasn't it?! You all put up a great fight!<line>Any interest in becoming bandits? You'll be welcomed in my gang.<wait><end>
+[60]Oh, look over there - a camp! What a relief! I suppose we should go there.<wait><end>
+[61]<party leader>, let's hurry to the camp.<wait><end>
+[62]Wait, <party leader>!<line>I want to come with you!<wait><end>
+[63]I.... I couldn't just stay back there doing nothing. I was so worried about Grandpa.<wait more><end>
+[64]In spite of what you said, I've decided I have to come with you all.<wait><end>
+[65]What?! You followed us here?<line>You're just a little girl! Now go home before you get hurt.<wait><end>
+[66]What you said makes sense, Ruburan. But, it's too dangerous for Cynthia to go back by herself.<wait><end>
+[67]I don't think I can help much in fighting, but I can use healing magic.<wait more><end>
+[68]If anyone is injured, I can heal them!<wait><end>
+[69]Well <party leader>, what do you think? Should we let her accompany us?<wait><end>
+[6A]<party leader> gently nods his head.<wait><end>
+[6B]Thank you! Well then, let's hurry to Ribble Camp.<wait more><end>
+[6C]I'm sure we'll be welcome, because a lot of people there are from Hassan too.<wait><end>
+
+; Chapter 1, Battle 04
+
+[6D]Once we cross this bridge, we can get to my secret hideout. I'll lead the way again.<wait><end>
+[6E]Well, everyone - quickly, follow me across!<wait><end>
+[6F]What?!!<line>What in the world is that?<line>Something's happening!<wait><end>
+[70]Ruburan, this looks dangerous.<line>Hurry! The bridge is starting to shake!<wait><end>
+[71]The rumours at Ribble Camp must be true, that's the Kraken!<wait><end>
+[72]It looks like we'll have some difficulty before we can cross the bridge and continue our journey.<wait more><end>
+[73]<party leader>, here you must show your strength as a Hero. Defeat it so that we can get across!<wait><end>
+
+[74]You did well, <party leader>.<wait more><end>
+[75]Let's get to the other side while the Kraken is not attacking.<wait><end>
+[76]Hurry everyone, the bridge is falling apart!<line>The Kraken is no longer our immediate concern, we must get across!<end>
+[77]Hey, boss!!<wait><end>
+[78]Ruburan, you've got yourself in quite a lot of trouble!<wait more><end>
+[79]Just a moment...<wait><end>
+[7A]I'll get the Kraken off your back!<wait><end>
+[7B]Nosshu used something to release a foul smell. The Kraken can't stand it, and retreats.<wait><end>
+[7C]Well, we made it through that one okay!<wait><end>
+[7D]Oh! The bridge...<wait more><end>
+[7E]The bridge is falling away!<wait><end>
+[7F]It seems there's only one way forward for us now.<wait><end>
+[80]Chief Ruburan, we've been waiting eagerly for your return!<wait><end>
+[81]Nosshu, you got away!<line>What about the others?<wait><end>
+[82]It's serious boss! I somehow managed to escape in the panic and confusion!<wait more><end>
+[83]When that woman came back, we knew it meant trouble.<wait><end>
+[84]'That woman'? I think you mean Mishaela.<wait><end>
+[85]Indeed. We can't waste any more time here.<delay 02><line>Let's hurry to my secret base!<wait><end>
+
+; Chapter 1, Battle 05
+
+[86]I'm sorry to say that your dear chief Ruburan is in enemy hands.<wait more><end>
+[87]Why not consider co-operating with me?<wait more><end>
+[88]It's the only way to save you all.<wait><end>
+[89]Is... is that true?<wait><end>
+[8A]It's true.<wait more><end>
+[8B]I don't think you follow that scoundrel of your own free will anyway. Wouldn't it be better for you to work with the Devil Army?<wait more><end>
+[8C]Once we are allies, our first mission will be to defeat Volcanon.<wait><end>
+[8D]Volcanon...!<line>Just a minute...<wait more><end>
+[8E]Volcanon, isn't he the god that protects this continent?<wait><end>
+[8F]That woman is one of the devils?<wait more><end>
+[90]I didn't know we were aiding such a great evil. This is no laughing matter.<wait more><end>
+[91]We might not exactly have been good guys, but we're not evil backstabbers either!<wait><end>
+[92]Wait right there Mishaela!<wait><end>
+
+[93]Well, well, well... you're back, Ruburan!<line>You didn't come out just to oppose my words, did you?<wait><end>
+[94]Minion of evil, your words are irrelevant.<wait more><end>
+[95]You tried to enslave us with sweet talk...<end>
+[96]I will no longer tolerate that!<wait><end>
+
+[97]I offered to help you. Is this how you repay my generosity?<wait more><end>
+[98]I'm sure you know that there will be consequences for your defiance!<wait><end>
+[99]Curse you!<delay 02><line>I can't move!<wait><end>
+
+[9A]Ah yes, that reminds me!<line>Since you want to die so eagerly, I'll give you a farewell present.<wait><end>
+[9B]You can stay there and watch while your henchmen burn in a living hell!<wait><end>
+
+[9C]Wait Mishaela...<wait><end>
+[9D]Aha!<line>So, there are yet more of you hiding over there, besides the rat!<wait more><end>
+[9E]But, I can't be bothered to wait for you to come out, I'm a busy woman you know...<wait><end>
+[9F]So, I'll brighten this place up with a Spark Level 3!<wait><end>
+[A0]You over there! Finish those peeping rats.<wait more><end>
+[A1]I'll leave first. It's time for me to face that troublesome Volcanon... and defeat him!<wait><end>
+[A2]Now, Lynx...<wait><end>
+[A3]Yes, ma'am?<wait><end>
+[A4]As planned, you should go to Max.<wait><end>
+[A5]Right!<wait><end>
+[A6]As for you there... finish them all.<line>Do not fail me.<wait><end>
+[A7]If you think this all of us, you are gravely mistaken!<wait><end>
+[A8]Curses!<line>If I weren't such a fool, my henchmen wouldn't be...<wait><end>
+[A9]Chief Ruburan, I'm sorry...<line>We were afraid... so afraid. We couldn't fight!<wait><end>
+[AA]It's okay, Nosshu. That woman sends a chill down my spine too!<wait more><end>
+
+[AB]Nevertheless, I cannot forgive her for this.<wait><end>
+[AC]Those devils use their power to toy with the world. I will not allow them to do whatever they like.<wait more><end>
+[AD]<party leader>, for this reason, I'd like to come along with you.<wait><end>
+
+[AE]Chief, I'd like to come along with you too!<wait><end>
+[AF]No, Nosshu - you need to stay here and protect our hideout.<wait><end>
+[B0]<end> ; continues from AF normally
+[B1]Right, chief!<wait><end>
+[B2]Well, let's go!<wait><end>
+[B3]Stay here, Nosshu, and...<wait more><end>
+[B4]... await my glorious return!<wait><end>
+[B5]Chiiieeeefff!!<wait><end>
+[B6]Nosshu...<delay 02><line>...<wait><end>
+[B7]Come on, <party leader>. We should leave now.<wait><end>
+
+; Chapter 1, Battle 06
+
+[B8]Hey, Mishaela's over there!!<wait><end>
+[B9]These birds are bothersome, aren't they? We can't focus like this. <wait><end>
+[BA]Go and get rid of them!<wait><end>
+[BB]I won't let you have your way!<wait><end>
+[BC]Ah, good job!<wait more><end>
+[BD]Now's our chance to seal away Volcanon's power!<wait><end>
+[BE]Ooooh!<delay 02><line>Shaaaa!<wait><end>
+[BF]Oh, ho ho ho!<wait more><end>
+[C0]Volcanon's power has been sealed away!<wait><end>
+[C1]That took care of another hindrance to our plan!<line>Oh ho ho ho!<wait more><end>
+[C2]I must return to Grans Island to make preparations. You stay here in case Volcanon tries anything.<wait><end>
+[C3]Mishaela's escaped!<line>Quickly <party leader>, after her!<wait><end>
+[C4]If you want to pass through here, you'll have to get past us first!<wait><end>
+[C5]It seems we've been discovered.<line>We have no choice but to defeat them, if we're to progress.<wait><end>
+
+[C6]My thanks to you, <party leader> and your Force.<wait><end>
+[C7]Who are you?<wait><end>
+[C8]I am Volcanon.<wait><end>
+[C9]You're Volcanon...<line>But how did you know <party leader>'s name?<wait><end>
+[CA]I've been watching the Devil Army's movements regularly.<wait more><end>
+[CB]On one occasion they appeared, and <party leader> was there with Max.<wait><end>
+[CC]I see.<wait><end>
+
+[CD]I am concerned that the Devil Army has a treacherous plan involving Grans Island. Their ambition will bring panic to all the creatures of these lands.<wait more><end>
+[CE]But their evil has already engulfed Grans Island, hence I cannot lay my hands on them.<wait><end>
+
+[CF]So... What should we do?<wait><end>
+[D0]You and your companions should go to Grans Island, and try to find a solution to this.<wait more><end>
+[D1]Max is there too, it's important that you find a way to help him.<wait><end>
+[D2]Going to Grans Island... is that all we have to do?<wait><end>
+[D3]If that's the case, I'd like to come along too.<wait><end>
+[D4]Didn't we see you earlier...?<wait><end>
+[D5]Teehee! We didn't succeed earlier because we weren't prepared for such trouble.<wait more><end>
+[D6]But I know I'll be a real asset to your team, because I can fly.<wait><end>
+[D7]What do you think, God Volcanon? Don't you think it's a good idea to let me go too?<wait><end>
+[D8]Hmm...<line>Indeed. <party leader> has no flying allies in his party.<wait><end>
+[D9]Yay! Well then, please allow me to fight the Devil Army at your side. We'll fight for peace together!<wait><end>
+[DA]By the way, God Volcanon, how are we going to get to Grans Island?<wait><end>
+[DB]North, head north.<line>Head north and your path will open before you.<wait><end>
+[DC]This cave will begin the next stage of your journey. I will always be watching over you, <party leader>!<wait><end>
+
+[DD]With God Volcanon's advice in mind, <party leader> and the others must now travel to Grans Island.<wait more><end>
+[DE]However, this is only the beginning!<wait><end>
+
+; Chapter 2: Target - Grans Island!
+
+; Chapter 2, Battle 07
+
+[DF]Step by step and day by day, <party leader> and his Force draw nearer to Grans Island.<wait more><end>
+[E0]However, following their unexpected escape, Mishaela is waiting for their arrival...<wait><end>
+
+[E1]Lynx, how are the plans to capture Max progressing?<wait><end>
+[E2]They're going well. If they continue as planned, we will soon have Max.<wait><end>
+[E3]Excellent.<line>By the way, Eiku, what became of <party leader> and his party?<wait><end>
+[E4]Well... I've been informed that they were able to defeat your guards and after they reached Bedoe, Volcanon appeared to them.<wait more><end>
+[E5]<end>
+[E6]They have not been seen since then.<line>Magus has begun a search for them.<wait><end>
+[E7]So, Magus!<wait><end>
+[E8]Is everything going to be alright?<wait><end>
+[E9]Hehehe! Don't worry.<wait more><end>
+[EA]If by any chance they should get through Pacalon, they won't survive the cunning trap I have prepared!<wait><end>
+[EB]Good.<line>You should go to Pacalon immediately!<wait><end>
+[EC]Hehehe...<line>I will... hehehe.<wait><end>
+[ED]By the way, what purpose will the old man from Hassan serve?<wait><end>
+[EE]Well, we have to let him live for now.<line>Primarily, it's about <party leader>. Secondly, he may be withholding important information from us.<wait more><end>
+[EF]The old man is a precious source for knowledge of the ancient relic.<wait more><end>
+[F0]However...<wait><end>
+[F1]If, by any chance, <party leader> is really the child of that man...<wait more><end>
+[F2]I thought Max was the only enemy we would have to worry about.<wait><end>
+[F3]Personally, I'm delighted at the opportunity to face such a powerful enemy.<wait><end>
+[F4]Eiku!<line>He is not your enemy... at least, not for now.<wait><end>
+[F5]But, if I defeat him first, Eiku won't have a chance, hehehe!<wait><end>
+[F6]What are you saying, Lynx?!<line>Are you implying that I'm not able to defeat <party leader>?!<wait><end>
+[F7]*guffaws*<line>Did I make it too obvious?<wait more><end>
+[F8]Oh well. What you choose to do about it is your own business.<wait><end>
+[F9]Enough, Lynx. Don't you have task called 'capturing Max' already?!<wait><end>
+[FA]Yes, m'lady! Please excuse me.<wait><end>
+[FB]Magus should be able to defeat <party leader> and his team without any problems, but it's your job to make sure Eiku. If he fails then it's your turn.<wait><end>
+[FC]<end> ; continues FB
+[FD]You can trust me with this task.<line>I'll bring him down, that's for sure! Just you watch me!<wait><end>
+[FE]Ho ho ho, Eiku!<line>Those are very promising words indeed! <wait><end>
+[FF]<party leader>, you're really going to have to try your best, because we're watching you!<line>Oh ho ho ho!<wait><end>

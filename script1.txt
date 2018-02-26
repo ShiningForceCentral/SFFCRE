@@ -1,0 +1,289 @@
+<width 14></center><wrap><border 01>
+
+[00]DEF dropped by <number>.<delay 01><end>
+[01]<name>'s DEF increased by <number>.<delay 01><end> 
+[02]<name>'s Maximum HP increased by <number>.<delay 01><end>
+[03]<name>'s MOV increased by <number>.<delay 01><end>
+[04]<name> is muddled!<delay 01><end>
+[05]The effect of <spell> has quickly worn off.<line>DEF returns to normal.<wait><end>
+[06]The effect of <spell> has quickly worn off.<line>DEF returns to normal.<wait><end>
+[07]The effect of <spell> has worn off.<line>ATT returns to normal.<wait><end>
+[08]The effect of <spell> has worn off.<line>Magic can be used again.<wait><end>
+[09]The effect of <spell> has worn off.<line><name>'s magical barrier vanished.<wait><end>
+[0A]The effect of <spell> has worn off.<line>The mist surrounding <name> has dissipated.<wait><end>
+[0B]<name> woke up.<wait><end>
+[0C]<name> returned to normal.<wait><end>
+[0D]<name> is cursed!<wait more><line>The curse has caused a sudden paralysis!<delay 01><end>
+[0E]<name> is cursed!<wait more><line>The curse inflicts<internal hint 01> <number> point<use suffix> of damage!<delay 01><end>
+[0F]<use dictionary><wait more><end>
+[10]<name> goes up a level!<line><name> is now Level <number>.<wait more><end>
+[11]ATT increased by <number>.<wait more><end>
+[12]DEF increased by <number>.<wait more><end>
+[13]AGI increased by <number>.<wait more><end>
+[14]Maximum HP increased by <number>.<wait more><end>
+[15]Maximum MP increased by <number>.<wait more><end>
+[16]...and learned the <spell> spell.<wait more><end>
+[17]<spell> increased to Level <number>.<wait more><end>
+[18]...but smoke rose from the <item>.<delay 01><end>
+[19]...but fine cracks appeared in the <item>.<delay 01><end>
+[1A]...but a big crack appeared in the <item>.<delay 01><end>
+[1B]...but the <item> became warped.<delay 01><end>
+[1C]...but the surface of the <item> became clouded.<delay 01><end>
+[1D]...but the <item> caught fire!<delay 01><end>
+[1E]...but the <item> shows signs of breaking.<delay 01><end>
+[1F]...but the <item> cracked in half.<delay 01><end>
+[20]...but the <item> broke into pieces.<delay 01><end>
+[21]...but the <item> has completely rusted.<delay 01><end>
+[22]...and smoke rose from the <item>.<delay 01><end>
+[23]...and fine cracks appeared in the <item>.<delay 01><end>
+[24]...and a big crack appeared in the <item>.<delay 01><end>
+[25]...and the <item> became warped.<delay 01><end>
+[26]...and the surface of the <item> became clouded.<delay 01><end>
+[27]...and the <item> caught fire!<delay 01><end>
+[28]...and the <item> shows signs of breaking.<delay 01><end>
+[29]...and the <item> cracked in half.<delay 01><end>
+[2A]...and the <item> broke into pieces.<delay 01><end>
+[2B]...and the <item> has completely rusted.<delay 01><end>
+[2C]<name> gained <number> experience<internal hint 02> point<use suffix>.<delay 01><end>
+[2D]Found <number> Gold.<delay 01><end>
+[2E]<name> found <use article 01><item>.<delay 01><end>
+[2F]<name> picked up the <item>.<delay 01><end>
+[30]<name> dropped the <item>.<delay 01><end>
+[31]<name> appeared!<wait><end>
+[32]<name>'s ATT increased by <number>.<delay 01><end>
+[33]<name>'s DEF increased by <number>.<delay 01><end>
+[34]<name>'s AGI increased by <number>.<delay 01><end>
+[35]<name>'s MOV increased by <number>.<delay 01><end>
+[36]<name>'s Maximum HP increased by <number>.<delay 01><end>
+[37]<name> searched the chest!<wait more><end>
+[38]The chest is empty!<wait><end>
+[39]Found <use article 01><item>.<delay 01><end>
+[3A]<name> picked up the <item>.<wait><end>
+[3B]But <name> can't carry any more items.<wait><end>
+[3C]The chest contained <number> Gold.<wait><end>
+[3D]<party leader> used the <item>.<delay 03><end>
+[3E]...but nothing happened.<delay 01><end>
+[3F]Once again, <party leader> and his party head into battle.<wait><end>
+[40]I'm <name>, <use article 01><full class>.<delay 01><end>
+[41]<swap parameters><name> the <full class> has joined the Force.<end>
+
+; Finding secret character
+
+[42]<name> found Sasuke!<wait><end>
+[43]I am called Sasuke.<line>Although I'm still training, I am as strong as Hanzou, the one who defeated Dark Dragon.<wait more><end>
+[44]Will you allow me to join your group?<wait more><end>
+[45]So! I can join?!<line>Then it's decided.<wait><end>
+[46]After the fight, you'll surely find me one step ahead, at headquarters!<wait><end>
+
+; Finding secret character
+
+[47]<name> found Kojirou!<wait><end>
+[48]I am Kojirou, a swordsman who travels to seek out powerful opponents.<wait more><end>
+[49]With a reputation such as yours, I'd like to have a match with you.<wait more><end>
+[4A]What? You won't fight me unless you defeat them?<wait><end>
+
+[4B]Well then, let me give you a hand.<wait><end>
+
+; Debug screens
+
+[4C]Configuration<delay 03><end>
+[4D]<clear screen>End<end>
+[4E]<clear screen>Battle Select<end>
+[4F]<clear screen>Event Character<end>
+[50]<clear screen>Test Mode<end>
+[51]<clear screen>Group Select<end>
+[52]<clear screen>Level Select<end>
+[53]<clear screen>Control Enemies<end>
+[54]<clear screen>Top Mode<end>
+[55]<clear screen>Game Completed<end>
+[56]<clear screen>Give Money<end>
+[57]<clear screen>Action Test<end>
+[58]<clear screen>Effect Test<end>
+[59]<clear screen>Sound Test<end>
+[5A]<clear screen>Reset<end>
+[5B]<clear screen>Save<end>
+[5C]Which battle number?<delay 01><end>
+[5D]Include who in the group?<delay 01><end>
+[5E]Level up which character?<delay 01><end>
+[5F]Play the game?<end>
+[60]Which sound number?<delay 01><end>
+[61]Allies<end>
+[62]Enemies<end>
+[63]Which one?<end>
+[64]Action<end>
+[65]Level<end>
+[66]Effect<end>
+[67]Reset<end>
+[68]Setup complete.<wait><end>
+[69]Invade territory?<delay 01><delay 01><end>
+[6A]Do you wish to record your adventure thus far?<end>
+[6B]However difficult it may be...<line>Good luck!<wait><end>
+[6C]Music could also be effective in stopping this menace!<wait><end>
+[6D]<clear screen>Fanfare<end>
+[6E]<clear screen>Welcome!<end>
+[6F]<clear screen>Legend of Light<end>
+[70]<clear screen>Fight! with the Ancient Light<end>
+[71]<clear screen>Place of Rest<end>
+[72]<clear screen>Flashback<end>
+[73]<clear screen>Devoted Soldier's Requiem<end>
+[74]<clear screen>Secret Maneuvers<end>
+[75]<clear screen>Victory Road<end>
+[76]<clear screen>Shining Force Gaiden 3<end>
+[77]<clear screen>Oh Curses!<end>
+[78]<clear screen>Joining the Force<end>
+[79]<clear screen>Save<end>
+[7A]<clear screen>Antidote<end>
+[7B]<clear screen>Revive<end>
+[7C]<clear screen>Class Change<end>
+[7D]<clear screen>Cursed<end>
+[7E]<clear screen>Searching Chest!<end>
+[7F]<clear screen>Distant Journey Calls<end>
+[80]<clear screen>Frontline<end>
+[81]<clear screen>Devil's Revival<end>
+[82]<clear screen>Message from Ancient Times<end>
+[83]<clear screen>Dark Force<end>
+[84]<clear screen>Fall of Footsteps<end>
+[85]<clear screen>Prelude to Battle<end>
+[86]<clear screen>Queen of Darkness<end>
+[87]<clear screen>Hole in the Heart<end>
+[88]<clear screen>Whereabouts of Fate<end>
+[89]<clear screen>Chaos Breaker<end>
+[8A]<clear screen>Peace that Overflows<end>
+
+; Chapter 3, Battle 18 (Chaos Breaker)
+
+[8B]<party leader>, this sword possesses the Powers of Light. It's a very important sword.<wait more><end>
+[8C]Is there an item you can drop?<delay 01><end>
+[8D]You can't give up now. Please accept it from His Highness.<wait more><end>
+[8E]Which item will you discard?<delay 01><end>
+
+
+[8F]<name> recovers <number> MP.<end>
+[90]Odd Eye looks on with open eyes.<end>
+[91]Enters the <delay 03>event.<delay 03><end>
+[92]Invoke Defcon event.<delay 03><end>
+
+; Introduction
+
+<begin intro>
+
+[93]Mishaela!<line>It's taken a long time. At last I've found you!<delay 03><delay 01><end>
+[94]What are you saying, Max?<line>If that's the case, it's time to finish me, don't you think?<delay 03><delay 01><end>
+[95]Too bad I'm not the same old Mishaela you defeated before!<delay 03><delay 01><end>
+[96]Mistress Mishaela, I am here!<line>You can always rely on Lynx.<delay 03><delay 01><end>
+[97]Leave them to me!<delay 03><delay 01><end>
+[98]So, Max, it seems that you're here to stop us from fulfilling our dream.<delay 03><delay 01><end>
+[99]<end> ; continues 98
+[9A]Do as you wish, Lynx.<delay 03><delay 01><end>
+[9B]Well, Shining Force!<line>Show me what you've got!<delay 03><delay 01><end>
+[9C]Ridion, we can't let Mishaela escape!<delay 03><delay 01><end>
+[9D]Adam, take Mead and the others and go after Mishaela!<delay 03><delay 01><end>
+[9E]<end> ; continues 9D
+[9F]Understood, Master Max.<line>We'll chase after Mishaela.<delay 03><delay 01><end>
+[A0]Mead, Paige, Sonette, let's go. Follow me!<delay 03><delay 01><end>
+[A1]Right!<delay 03><delay 01><end>
+[A2]Ridion, you sneak up behind Lynx.<delay 03><delay 01><end>
+[A3]Okay Max!<delay 03><delay 01><end>
+[A4]They've gone after Mistress Mishaela?<delay 03><delay 01><end>
+[A5]I should get to her side quickly.<delay 03><delay 01><end>
+[A6]Max fights well, however...<delay 03><delay 01><end>
+[A7]Pity I can't stay... I must return to Mistress Mishaela.<delay 03><delay 01><end>
+[A8]Hold it, Lynx! You'll have to get past me first.<delay 03><delay 01><end>
+[A9]I'll knock you down and wipe the floor with you, Devil!<delay 03><delay 01><end>
+[AA]Ridion, he got away.<line>I'm concerned about Adam and the others. Let's hurry up and rejoin them.<delay 03><delay 03><end>
+[AB]With this, Mishaela, it's time for you to die.<line><clear counter>Your anger is useless. This is the end.<delay 03><delay 01><end>
+[AC]Adam fires his laser cannon.<delay 03><delay 01><end>
+[AD]Oh, ho ho ho!<line>I can't be defeated *that* easily!<delay 03><delay 01><end>
+[AE]Eiku, destroy those hindering pests!<delay 03><delay 01><end>
+[AF]I have my orders...<line>it's nothing personal!<delay 03><delay 01><end>
+[B0]Take this...<line>Blaze level 3!<delay 03><delay 01><end>
+[B1]Hah hah hah ha!<line>You'd do well to realise just how much power I have.<delay 03><delay 01><end>
+[B2]Now Lynx, Eiku, Magus - let's GO!<delay 03><delay 01><end>
+[B3]A.. Adaaaam!<delay 03><delay 01><end>
+[B4]...<line>Adam, are you alright?!<delay 03><delay 01><end>
+[B5]...<line>Master<delay 02> Max...<delay 03><delay 01><end>
+[B6]Mishaela has damaged Adam...<delay 03><delay 01><end>
+[B7]Mead, Paige, Sonette, you stay here and help Adam.<delay 03><delay 01><end>
+[B8]Ridion, follow me, we'll go after Mishaela!<delay 03><delay 01><end>
+[B9]Please don't leave us here! Let us come and fight with you.<delay 03><delay 01><end>
+[BA]Mead, don't say such things.<line>Adam will need someone to stay and assist him, won't he?<delay 03><delay 03><end>
+[BB]What a thing to say!<line>I'm concerned that only two people are going though.<delay 03><delay 01><end>
+[BC]It'll be okay Paige.<line>Though you are gallant, you are needed here.<delay 03><delay 01><end>
+[BD]Max and the others won't be harmed.<delay 03><delay 01><end>
+[BE]That's right Sonette.<delay 03><delay 01><end>
+[BF]I'll leave Adam in your capable hands. Ridion will come with me.<delay 03><delay 01><end>
+[C0]Just you wait, Mishaela!<delay 03><delay 01><end>
+[C1]Ho ho ho!<line>You're not going to stop me here!<line>I'll cast Spark level 3!<delay 03><delay 01><end>
+[C2]Your turn, Magus!<delay 03><delay 01><end>
+[C3]Alright!<line>*guffaws*<line>Blaze level 2!<delay 03><delay 01><end>
+[C4]How do you like that, Max?<line>Oh ho ho ho!<delay 03><delay 01><end>
+[C5]Ridion, we must destroy Mishaela and her devils to stop their evil plan...<delay 01> at all costs!<delay 03><delay 01><end>
+[C6]<end> ; continues C5
+[C7]Yes, we will defeat them!<delay 03><delay 01><end>
+
+<end intro>
+
+; Chapter 1: The Ancient Shrine, a New Journey Begins
+
+[C8]The Shining Force fought a long battle at the ancient temple on the continent of Parmecia.<wait more><end>
+[C9]Adam was damaged, and so they returned to the port town of Hassan to repair him...<wait><end>
+
+[CA]How are you feeling, Adam?<line>Are the repairs working, I wonder?<wait><end>
+[CB]It's hopeless. I don't think I'll be able to fight anymore.<wait more><end>
+[CC]The others will be able to fight though, they're strong enough.<line>We should set out to find Max as soon as possible.<wait><end>
+[CD]If you think it's necessary Adam, set up a pursuing party.<wait><end>
+[CE]Indeed. I must protect Master Max, and prevent the entire world from being destroyed!<wait more><end>
+[CF]For that reason, we should leave here and try to pick up his trail.<line>Don't worry though, we'll be back.<wait><end>
+[D0]Adam should be doing fine now.<wait more><end>
+[D1]When we brought him here to Hassan, I was worried he might never return to normal.<wait><end>
+[D2]There's no need to worry, Mead. There's a self-repairing mechanism inside me.<wait more><end>
+[D3]I may not be completely repaired yet, but I'm not about to become a useless lump of metal!<wait><end>
+[D4]Nonetheless, we'll still worry a little.<line>Adam is delicate, unlike Mead!<wait><end>
+[D5]That's right, Paige. Who would have imagined how Adam managed to recover?!<wait more><end>
+[D6]For an apprentice mage like Hawel, this will be the sight of a lifetime!<wait><end>
+[D7]What are you saying about me this time, Sonette?<wait><end>
+[D8]Do you really think that I'm just some useless academic?<wait more><end>
+[D9]I've already taught you so much. What a waste of time! <wait><end>
+[DA]Just kidding, just kidding!<line>I've often had to depend on you and your experience, Hawel.<wait><end>
+[DB]Okay, is everybody here?<line>Well, let's journey to the ancient temple to see what devils we must face!<wait><end>
+[DC]Just a minute!<line>Shouldn't Knuckles be going with us?<wait><end>
+[DD]That lazybones must have slept in again. He's really let Max down this time, he doesn't deserve to come with us.<wait more><end>
+[DE]He's always late, and we always have to wait for him. We'll be waiting all day for him to wake up and get here!<wait><end>
+[DF]That's right. There's no reason to let him delay us.<line>When he comes out, he can join us. Let's go now.<wait><end>
+[E0]Oh dear! Knuckles, what shall we do with you!<line>If he shows up, I'll tell him you've already left.<wait><end>
+[E1]Thank you. We couldn't ask for more.<wait><end>
+[E2]Well then, Elder, our group should leave for the Ancient temple now. We'll return soon.<wait><end>
+[E3]I'll be here waiting for you.<wait><end>
+[E4]Grandpa, could <lookup name 00> please have a word with you?<wait><end>
+[E5]Alright.<line>Wait inside, I'll be there in a moment.<wait><end>
+[E6]<lookup name 00> became lost on his journey and came to Hassan by coincidence.<wait more><end>
+[E7]I believe <lookup name 00> has something to tell Adam, too...<wait more><end>
+[E8]...but I suppose he will have to wait until you return.<wait><end>
+[E9]Well then....<line>Let's go to the ancient temple!<wait><end>
+[EA]Hey! Wait up!<line>I'm all set to come along and do my best!<wait><end>
+[EB]Knuckles, it's you!<line>What in the world were you thinking, arriving so late?!<wait more><end>
+[EC]If you hadn't got here in time, we'd be setting off for the ancient temple without you!<wait><end>
+[ED]Ha ha!<line>Sorry, sorry!<wait more><end>
+[EE]I slept in late... then rushed to get ready!<line>I'm here because I know how important this is.<wait><end>
+[EF]Come along then, it's time to depart.<wait><end>
+[F0]Well everyone, let's go!<wait><end>
+
+; Chapter 1, Battle 01
+
+[F1]So Adam and his companions headed for the ancient temple to search for Max's trail, however...<wait><end>
+
+[F2]This...<line>Is this it?<wait><end>
+[F3]It is!<line>This is the Caravan...<line>It's said to be a very convenient means of transportation.<wait><end>
+[F4]I... I don't understand!<line>How do you get this thing to move?<line>If we could only work out how to get inside...<wait><end>
+[F5]Oh well, that woman said it's okay to break it if we can't make it work.<end>
+[F6]He's going to damage that ancient relic!<wait><end>
+[F7]Someone just had to come and spoil this...<line>We'll abandon the caravan for now. Let's get out of here!<wait more><end>
+[F8]Hey, you!<line>A thief like me is skilled enough to escape. Men, why don't you keep them company?<wait><end>
+[F9]The enemy is coming!<wait><end>
+[FA]Adam, you can't fight, but we can!<wait><end>
+[FB]Understood. Well then Mead, please lead them!<wait><end>
+
+[FC]What?!<line>My men can't have been defeated!<wait more><end>
+[FD]I think now's the time for a hasty exit.<wait><end>
+[FE]I suppose you must be one of Mishaela's minions, since you're here at the ancient temple trying to damage things.<wait more><end>
+[FF]We can't let you go free until we have decided there is good reason to do so.<wait><end>

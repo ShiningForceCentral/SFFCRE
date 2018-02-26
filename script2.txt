@@ -1,0 +1,288 @@
+<width 14></center><wrap><border 01>
+
+; Chapter 2, Battle 07 (continued)
+
+[00]<party leader> and the Force were now intent on heading north to Pacalon. To get there, they must pass through a cave...<wait><end>
+
+[01]This cave is really long, isn't it?<wait><end>
+[02]It's just too narrow. I'm having trouble flying in here!<wait><end>
+[03]Aww, quit complaining.<line>The way out can't be too far now...<wait more><end>
+[04]Hey! I just felt a breeze on my skin!<wait><end>
+[05]Hold on Hawel... why do you always act like you're some great know-it-all?<wait><end>
+[06]Whatever. This cave is bound to come out somewhere in the region of Pacalon.<wait more><end>
+[07]We can take some time to have a well-deserved rest after we get out.<wait><end>
+[08]What's that?!<wait more><end>
+[09]I think I just saw someone over there... a shadow moved.<line>This could mean danger.<wait><end>
+[0A]Eh?<line>We don't need that sort of thinking. It's nothing.<wait><end>
+[0B]No, I'm sure it was somebody.<line>Hello...? Is anyone there?<wait><end>
+[0C]Do you have to shout so loud?! That could be Mishaela's squad ahead of us, what shall we do?<wait><end>
+[0D]Hey, did I hear somebody's voice just now?<wait><end>
+[0E]Oooh, I heard that too!<line>Are they the ones that Master Magus is searching for?<wait><end>
+[0F]Alright!<line>I'll attack first!<wait><end>
+[10]The cave is shaking!<wait><end>
+[11]Eek! The pillars!<wait><end>
+[12]It's the enemy!<line>Attack them, everyone, but be careful!<wait><end>
+
+[13]They're still coming?<line>Then I'll try again!<wait><end>
+[14]Master Magus! We've been discovered...<line>Th... they're here.... uuggghh<line>...<wait><end>
+[15]It's just a matter of time until the enemy finds us...<wait more><end>
+[16]<party leader>, we must make haste!<wait><end>
+
+; Chapter 2, Battle 08
+
+[17]Fight!<line>If we defeat them in this battle, we can take over the city of Pacalon!<wait><end>
+[18]You're too slow!<line>Why do some of the Pacalon troops still remain undefeated?!<wait><end>
+[19]Well, Master Magus...<line>The Pacalon force have grouped together in resistance - we can't defeat them!<wait><end>
+[1A]Then they leave me no other choice...<wait more><end>
+[1B]We'll make that river overflow! Pacalon's soldiers will have a drink of water like they've never had before!<line>Heh heh heh!<wait><end>
+[1C]Heh heh heh! Good, it worked.<wait more><end>
+[1D]They soon lost their fighting spirit!<line>Now everybody, let's march into Pacalon!<wait><end>
+[1E]Oooh!<wait><end>
+[1F]<party leader>, we'll soon be reaching Pacalon, the country of centaurs.<wait more><end>
+[20]Over there you'll see a crowd of their splendid Knights!<wait><end>
+[21]Oh no! Pacalon is under attack!<wait><end>
+[22]If I'm not mistaken, that's the Devil Army!<line><party leader>, we must assist our allies.<wait><end>
+[23]Master Magus!<line>Look over there! <party leader> and his Force have arrived.<wait><end>
+[24]Well, if we take the castle first, we can use it against <party leader> and his soldiers!<wait><end>
+[25]Ahh! It looks like our soldiers were defeated by <party leader> yet again!<wait><end>
+[26]We've got no choice.<line>Withdraw our troops and defeat <party leader> first!<wait><end>
+
+[27]*grunt*<line>How could this happen?<wait><end>
+[28]Hehehe! What's wrong Magus?!<line>Did things not go according to plan?<wait><end>
+[29]L...Lynx...?<line>Easy for you to say!<line>I'm only a step away from finishing them off.<wait><end>
+[2A]I find that most dubious, judging by the current situation.<wait><end>
+[2B]That's not fair!<wait more><end>
+[2C]If they hadn't arrived so soon, I could have taken them as planned!<wait><end>
+[2D]It seems that they came here because they found you.<wait><end>
+[2E]Please, Lynx! I beg you to take me with you!<wait><end>
+[2F]...well, alright I'll help you this once.<wait><end>
+[30]<party leader>, the enemy has retreated!<wait><end>
+[31]I'm Sylvia, a Knight from Pacalon.<wait more><end>
+[32]Thanks to you our country is safe and the Devil army has departed.<wait><end>
+[33]You must be <party leader>, right?<line>I know that because we received a report from Volcanon's country, Bedoe.<wait><end>
+[34]I flew to Pacalon from Bedoe when I heard about the Devil Army.<wait more><end>
+[35]Not everyone can fly so far without a rest, wouldn't you agree? Ha ha ha!<wait><end>
+[36]So, you were the one at Bedoe with Kiddo, fighting the Devil Army...<wait><end>
+[37]Ah yes, I remember that.<wait more><end>
+[38]I also entered the cave, and just missed the cave-in.<wait more><end>
+[39]So, I quickly made it through one step ahead of you to Pacalon.<wait><end>
+[3A]Your actions have made me think...<wait more><end>
+[3B]I'd like to come with you all and fight to protect our world.<wait><end>
+[3C]I hope I'm not too late, but I also wish to join you.<wait><end>
+[3D]Sylvia the Knight and Julia the Birdwoman join the Force.<wait><end>
+[3E]Before we go on to fight, we should all take a rest in Pacalon.<wait><end>
+
+; Chapter 2, Battle 09
+
+[3F]Magus, we must report to you that this man has broken Army regulations!<wait><end>
+[40]Now, if I remember correctly, you're Eric. That is your name, isn't it?<wait more><end>
+[41]I understand you used to be a spy...<wait><end>
+[42]I didn't do anything of the sort!<wait><end>
+[43]Ah, Magus, you always did enjoy blaming the innocent!<wait><end>
+[44]Oh, it's you again.<line>You do me an injustice, Lynx. This time I have proof.<wait><end>
+[45]Really?<wait><end>
+[46]Then why don't you show me this 'proof'?<wait more><end>
+[47]What has Eric done? And what could Eric hope to achieve?<wait><end>
+[48]All I want is to see Mishaela.<wait more><end>
+[49]If I enter the Devil Army, one of these days I'll meet up with her. So, that's the reason for my actions.<wait><end>
+[4A]Wh... what?!<wait><end>
+[4B]Well, well!<wait><end>
+[4C]You two! Get him and take him for execution!<wait><end>
+[4D]Wait. Isn't this interesting?<wait><end>
+[4E]Lynx, what do you plan to do?<wait><end>
+[4F]You caught him by using dirty traps. I cannot accept that.<wait><end>
+[50]Eric is released from his chains.<wait><end>
+[51]Fight me, Eric!<wait more><end>
+[52]If you cannot defeat me, you do not have a chance against Mistress Mishaela!<wait><end>
+[53]I'm ready anytime... c'mon!<wait><end>
+[54]Everyone else, step back and don't interfere!<wait><end>
+[55]Oooh!<wait><end>
+[56]*gasp*<wait><end>
+[57]*gasp*<wait><end>
+[58]Now's our chance! Everyone, after Eric!<wait><end>
+[59]You can't do that!<line>I'm leaving this place now...<wait><end>
+[5A]After him!<wait><end>
+[5B]It's a shame we have to kill a man like him.<wait><end>
+[5C]I wanted to defeat that man in a fair battle.<wait more><end>
+[5D]My apologies for causing you this trouble, Magus.<wait more><end>
+[5E]But, remember this: you should always fight fair and square!<wait><end>
+[5F]Lynx is so selfish. One of these days I'll get even with him.<wait><end>
+[60]First, I must find Eric, otherwise I'll be in big trouble!<wait><end>
+[61]Volcanon said that we should head North.<wait more><end>
+[62]If we carry on this way, and don't go astray, we should reach the town of Moun.<wait more><end>
+[63]We'll have to go via Moun to get to the far north, where he said we'll find a real treat at a place called Nazca.<wait><end>
+[64]It's about time our scout Julia reported back to us.<wait><end>
+[65]Those guys seem to be wandering around quite strangely, don't they?<wait more><end>
+[66]It seems that Magus is the commanding officer of the Devil Army's force here, and they're quite frantic right now to find a guy called Eric...<wait><end>
+[67]<end> ; continues 66
+[68]Eric...<line>Interesting...<line>Who is that, I wonder?<wait><end>
+[69]Any sign of Eric?<wait><end>
+[6A]No, he doesn't seem to be here.<wait><end>
+[6B]I don't know... he must be further away. We've gotta search well!<wait><end>
+[6C]Hey!<line>It's you guys again!<wait><end>
+[6D]Curses!<line>It seems like we'll have to fight them again!<wait><end>
+[6E]Hmm, did those guys make it this far to the north?<line>Put off the search for Eric, we must attack <party leader> and his Force!<wait><end>
+
+[6F]We only just failed to catch Eric, and it's because we had to see to you first!<wait more><end>
+[70]And now we're disgraced! Uuggh, if Lynx hadn't gotten in my way...<wait more><end>
+[71]<party leader>, next time I'll do whatever it takes, remember that! Hehehe!<wait><end>
+[72]Whatever it takes? What does he mean?<wait more><end>
+[73]Oh well, anyway...<line>As Sylvia said, we should head to the town of Moun now.<wait><end>
+
+; Chapter 2, Battle 10
+
+[74]...this is my battle plan, Lynx, and I need your assistance.<wait><end>
+[75]What do you think you are doing?<line>I wanted a fairly matched battle.<wait more><end>
+[76]If you're going to have such unfair tactics, I can't go along with them. You need to rethink your plans, Magus.<wait><end>
+[77]Hmmm.... unfair, you say?<wait more><end>
+[78]The only thing that matters in a battle is victory. I bet I can handle this without you anyway.<line>If you don't like the way I'm doing this, then go somewhere else.<wait><end>
+[79]Are you serious, Magus?!<wait more><end>
+[7A]Well, if you really mean it, it's not my turn anyway.<wait><end>
+[7B]Well, well, it's the Shining Force. I've heard rumours about you!<wait><end>
+[7C]You're early, we were just about to start preparing your welcome!<wait><end>
+[7D]Isn't the Devil Army here?<wait><end>
+[7E]No, the Devil Army already withdrew because they heard you were coming.<wait><end>
+[7F]They're bound to attack somewhere, don't you think?<wait><end>
+[80]...please, won't you come into our town?<wait><end>
+[81]This is a trap! Get out of there NOW!<wait><end>
+[82]Hehehe, the fools actually came in!<wait><end>
+[83]It's you!<wait><end>
+[84]Yes it is I, Magus, commander of the Devil Army!<line>Take a look around, <party leader>!<wait><end>
+[85]You are completely surrounded.<line>Prepare to die... in the most humiliating way!<wait><end>
+
+[86]Impossible! They defeated my troops again!<wait more><end>
+[87]I should have known that Lynx's absence was the fatal flaw in my plan.<wait more><end>
+[88]But remember this: you barely escaped with your lives!<wait><end>
+[89]I should have known this was a trap...<wait><end>
+[8A]Hey, over here! Hurry up and open this gate!<wait><end>
+[8B]Thank goodness you're alright.<line>I didn't expect you to defeat the Devil Army under the circumstances.<wait><end>
+[8C]You're the one who Magus was pursuing?<wait><end>
+[8D]That's right, I'm Eric.<wait><end>
+[8E]I joined the Devil Army to see Mishaela. They discovered my real intentions, and took me before Magus.<end> 
+[8F]So, why do you want to see Mishaela?<wait><end>
+[90]My father, Elliot, worked for King Ramladu.<wait more><end>
+[91]But, the Devil Army manipulated the King, and made him a wicked man...<wait><end>
+[92]My master, Max, told me of Elliot.<wait more><end>
+[93]He was a proud warrior.<wait><end>
+[94]He knew the King was wrong, but he never betrayed his King.<wait><end>
+[95]I see.<wait><end>
+[96]But despite that, father should have fought against the Devil Army.<wait more><end>
+[97]I want to defeat the Devil Army. Please let me join you!<wait><end>
+[98]<end> ; continue 97
+[99]Since Moun and its people are safe and peaceful again, we should stay here and heal any injuries before we begin our journey.<wait><end>
+[9A]<end> ; continue 99
+
+; Chapter 2, Battle 11
+
+[9B]This is simply disastrous Magus! Do you think your failure can be excused?!<wait><end>
+[9C]B....but if Lynx had followed my plan, it would have worked...<wait><end>
+[9D]...<wait><end>
+[9E]That's just an excuse, Magus, you poor excuse for a man!<wait><end>
+[9F]...next time I'll send my strongest unit to hunt them down and attack.<wait><end>
+[A0]If you fail to finish them next time, the consequences will be dire.<wait><end>
+[A1]This is getting serious. If you want, I can help you.<wait><end>
+[A2]*guffaws*<line>Excuse me?! You are the one who got me into this fix!<wait><end>
+[A3]I will not stoop so low as to use traps, even if it is by Mistress Mishaela's command.<wait><end>
+[A4]<end> ; continue A3
+[A5]Is that what you call chivalry?<line>Fine then! I won't ask you again.<wait more><end>
+[A6]Lynx, get out of my sight immediately!<wait><end>
+[A7]If that's what you want...<wait more><end>
+[A8]Magus, I wish you well in your war!<wait><end>
+[A9]Did he leave?<line>Finally!<line>That Mishaela too... only foul words come out of her mouth.<wait><end>
+[AA]Soon I, the great Magus, will show them how powerful I really am!<wait more><end>
+[AB]I will lead my troops to great victory, dealing death with every blow!<line>*guffaws*<wait><end>
+[AC]This is the northernmost part of the Parmecian continent.<wait more><end>
+[AD]Grans is already within our reach!<wait><end>
+[AE]This must be the place God Volcanon told us about.<wait><end>
+[AF]I've been waiting for you...<wait><end>
+[B0]It's you, Magus!<wait><end>
+[B1]So you've joined them, have you, Eric?<line>If so, all the more convenient for me!<wait more><end>
+[B2]I must praise you for making it this far...<line>*guffaws*<wait more><end>
+[B3]...but you've walked into my trap, and now I shall send you to your graves.<wait><end>
+[B4]<party leader>, I wouldn't put it past that guy to use foul play.<line>Please, be careful of his filthy trap!<wait><end>
+
+[B5]<party leader>, the enemy is coming!<wait><end>
+
+[B6]My elite team have been defeated.... th... those fools... Ugh!<wait more><end>
+[B7]Perhaps those guys really are the Shining Force?<wait more><end>
+[B8]Lynx, I beg you... please, capture my enemies!<line>Uuuggghhh...<wait><end>
+[B9]Magus... that terrible coward had it coming.<wait more><end>
+[BA]But, we're not there yet <party leader>. We still have to find Master Max!<wait><end>
+[BB]Well done, <party leader>!<wait><end>
+[BC]Hmm? That's not God Volcanon's voice...<wait><end>
+[BD]I am Mitula.<line>Volcanon sends his heartfelt gratitude.<wait more><end>
+[BE]I've been watching over you from my country, Tristan.<wait><end>
+[BF]Eric comes from Tristan, a country with a Goddess. Are you the Goddess he's talking about?<wait><end>
+[C0]Goddess Mitula?<wait><end>
+[C1]I, along with Volcanon, am also your ally!<wait more><end>
+[C2]<party leader>, you must prevent the devil's revival, the time is approaching steadily.<wait><end>
+[C3]So you're Goddess Mitula. Tell me, what happened to Master Max?<wait><end>
+[C4]Max was defeated in a battle on Grans Island.<wait><end>
+[C5]What!<line>Master Max... defeated?!<wait><end>
+[C6]Then they disappeared.<line>I believe they are waiting for a chance to counterattack.<wait more><end>
+[C7]Max must be waiting for you there.<wait><end>
+[C8]Master Max is waiting for us...<wait><end>
+[C9]Max's power is gone, you are now the forces of Light.<wait><end>
+[CA]We are the Shining Force...<wait><end>
+[CB]That's right!<line><party leader>, before you go on to search for Max, I must give you this, the Necklace of Light.<wait><end>
+[CC]According to legend, its radiance has been waiting for you!<wait><end>
+[CD]The Necklace of Light became attached to <party leader>'s chest.<wait><end>
+[CE]You must go to Grans Island, I'll arrange for a magician from Tristan to go with you.<wait more><end>
+[CF]I'm afraid to say, my powers are limited and are being obstructed, but I'll be praying for your safety.<wait><end>
+[D0]Even if this magician from Tristan joins us, we still don't know how we're going to get to Grans Island...<wait><end>
+[D1]Use the Nazca Ship!<wait><end>
+[D2]Nazca Ship?!<wait><end>
+[D3]The Ancients built it, a vehicle to fly in the air!<wait><end>
+[D4]I'm Minto, a magician from Mitula's country of Tristan.<wait more><end>
+[D5]I came to explain to you the legend of the Nazca Ship.<wait><end>
+[D6]So, you're from Tristan...<line>But, what Nazca Ship? Where is it?!<wait><end>
+[D7]*giggles*<line>It's right here!<line>The very ground beneath us will fly, it is the ship.<wait more><end>
+[D8]As your friend and ally, please allow me to come along with you.<wait><end>
+[D9]This is the entrance to the Nazca Ship. Please follow me!<wait><end>
+[DA]Minto placed a jewel, sparkling with light, on the ground.<wait><end>
+[DB]The Nazca Ship is ready to fly.<wait><end>
+[DC]Well, everyone, let's all get in!<wait><end>
+[DD]<party leader> and the Force are heading towards dark clouds as the Devil Army's plot for Grans Island develops...<wait><end>
+[DE]<end> ; continue DD
+
+; Chapter 3: Ambition of the Devil Group
+
+; Chapter 3, Battle 12
+
+[DF]<party leader> and the others flew across to Grans Island in the Nazca Ship, a flying ship made by the Ancients.<wait more><end>
+[E0]However, Grans is a savage land with monsters roaming free...<wait><end>
+[E1]<end> ; continues E0
+
+[E2]This is a very remote place...<wait><end>
+[E3]It seems quite rough, doesn't it? How uncivilized!<wait more><end>
+[E4]I really don't understand what would make anyone want to come here!<wait><end>
+[E5]This mist is very thick, it's quite mysterious...<wait><end>
+[E6]I'd call it suspicious rather than mysterious.<wait><end>
+[E7]Mwahaha!<line>We've been eagerly awaiting your arrival!<wait><end>
+[E8]It seems as though the Devil Army has been lurking in the mist!<wait><end>
+[E9]Once our spies informed us that you were heading for Grans, we laid in wait for you.<wait more><end>
+[EA]We thought you'd crawl by sometime...<line>Heh heh heh<line>...and it's just as we thought!<wait more><end>
+[EB]Now it's time for us to defeat you in battle!<wait><end>
+
+[EC]Hohoho!<wait><end>
+[ED]Hoho, you are really good.<wait><end>
+[EE]W....who are you!<wait><end>
+
+[EF]I didn't just appear from nowhere! I'm Morton, and I've been training here.<wait><end>
+[F0]It was most impressive to see your perfect defeat of the Devil Army.<wait more><end>
+[F1]That young man called Max is a very skillful warrior, but you are also good!<wait><end>
+
+[F2]Max?!<delay 02><line>You know Master Max?<wait more><end>
+[F3]Please, tell me more! Max is my master!<wait><end>
+[F4]Hohoho, is that so?<line>You're Max's companion?<wait more><end>
+[F5]We made the rough crossing from Parmecia to Grans together, that's how we know each other.<wait><end>
+[F6]So, Max is here now?!<line>Please, let us see him!<wait><end>
+[F7]Unfortunately he's not here to see.<wait more><end>
+[F8]I alone remain here, to continue my training and to find a waterfall which is rumoured to have supernatural powers.<wait><end>
+[F9]So then, Mr. Morton, you don't know where Max is?<wait><end>
+[FA]Unfortunately, that's the case.<line>I only know the way Max went...<wait><end>
+[FB]So, where was that?<wait><end>
+[FC]I'll remember in a minute... don't be impatient!<wait><end>
+[FD]Well, I've decided I should probably go with you.<wait more><end>
+[FE]Even though I can't remember, it has been quite some time, and we should get going!<wait><end>
+[FF]We must help to get justice for our brave friend.<line>After all, what have I been doing all this training for?!<wait><end>

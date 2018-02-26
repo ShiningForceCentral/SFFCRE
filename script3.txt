@@ -1,0 +1,310 @@
+<width 14></center><wrap><border 01>
+
+; Chapter 3, Battle 12 (continued)
+
+[00]Max has probably been taken to the devil's stronghold at Ground Seal's ancient tower.<wait more><end>
+[01]So, I assume that's where we'll be going too.<wait><end>
+
+; Chapter 3, Battle 13
+
+[02]The stronghold of Galam lies ahead of us. It was originally built to defend against monster attacks.<wait more><end>
+[03]We'll need to go through it.<wait><end>
+[04]You say that's what it was for originally, but what has become of it now?<wait><end>
+[05]It's now occupied by the Devil Army.<wait more><end>
+[06]Some say that only Eiku remains there, I think they are here for a purpose...<wait><end>
+[07]?!<wait><end>
+[08]I heard this from the people of Roft village.<wait><end>
+[09]Roft village?<wait><end>
+[0A]Yes, the village is right ahead of us. We'll go there first, before we go to the fortress of Galam.<wait><end>
+[0B]They're here!<wait more><end>
+[0C]It's those pathetic mortals who dare to defy the Devil Army!<wait more><end>
+[0D]Although we are Master Eiku's scouting party, we alone are enough to take them down!<wait><end>
+[0E]Look over there! It's the Devil Army!<line>Looks like they found us.<wait><end>
+
+[0F]You're doing very well!<line>Since that's the case... tentacles, come out!<wait><end>
+
+[10]Remember this... although you defeated us, you won't defeat Master Eiku in his fortress...<line>ugh...<wait><end>
+[11]<party leader>, having heard those words, it seems Eiku's fortress may be a considerable thing to deal with today.<wait more><end>
+[12]Before we go on to fight, we should go and drop by the village of Roft.<wait><end>
+[13]<end> ; continues 12
+
+; Chapter 3, Battle 14
+
+[14]It seems that my scouting party met an untimely end.<wait more><end>
+[15]My order to avoid the battle and lure the enemy out must have been ignored.<wait more><end>
+[16]Since they defeated Magus, it's clear they are tough.<wait><end>
+[17]They really are the Shining Force. No kidding.<wait><end>
+[18]That's right, Eiku.<line>I suggest that you pay extra attention, and be well prepared before you face them.<wait><end>
+[19]Lynx!<wait><end>
+[1A]Indeed.<line>How are your battle preparations progressing?<wait><end>
+[1B]What are you doing here!?<line>Magus died before your very eyes, and you didn't try to help him.<wait more><end>
+[1C]If I was in the same situation, you wouldn't help me either. I will not allow this to happen.<wait more><end>
+[1D]If those guys enter my fortress, they won't ever leave it!<wait><end>
+
+[1E]Eiku, are you saying that I allowed Magus to die?<wait more><end>
+[1F]I suppose no matter what I say, it won't change your prejudice.<wait more><end>
+[20]I shouldn't have wasted my time worrying about you, Eiku.<line>Anyway, good luck. You must win.<wait><end>
+
+[21]...is he gone?<wait><end>
+[22]It looks like they've arrived.<wait><end>
+[23]We're here to fell this fortress, isn't that right men?!<wait><end>
+[24]Everyone, they are here! Now take them down!<line>I can already see our victory!<wait><end>
+[25]Uooo!<wait><end>
+
+[26]Mwahahaha!<line>Shining Force...<line>You've done well, according to the rumours.<wait more><end>
+[27]But you won't be able to progress beyond the fortress of the great Eiku!<wait more><end>
+[28]I shall take revenge for Magus, and you'll feel the pains of hell!<wait><end>
+[29]<party leader>... what kind of trap has Eiku set for us?<wait more><end>
+[2A]We don't know what it is, but we must advance.<line>We must go forward if we are to find Master Max.<wait><end>
+
+; Chapter 3, Battle 15
+
+[2B]<party leader>, this is an eerie fortress, don't you agree?<wait more><end>
+[2C]Those stone statues almost seem to be staring at us!<wait><end>
+[2D]Those statues mark your tombstones.<wait><end>
+[2E]You've done well to get this far, but now I'll stop you.<wait more><end>
+[2F]You won't get your way, no matter what... and this place shall be your graveyard.<wait><end>
+[30]<end> ; continues 2F
+[31]What are you talking about, Eiku?<line>We're going to get through your fortress and get to Master Max.<wait><end>
+[32]Fwahahaha....<line>You're so stupid!<line>Max is already...<wait more><end>
+[33]Feh, I've said enough.<line>Enjoy yourselves in my terrible fortress!<wait><end>
+
+[34]Now it's time for you to experience the true terror of this Fortress.<line>Awaken, stone statues!<wait><end>
+
+[35]These fools...?<line>They can't have defeated me, the Great Eiku!<wait more><end>
+[36]They really must be the legendary Shining Force...<line>This really can't be happening.<wait more><end>
+[37]But, it's already too late for Max...<line>M... Mistress Mishaela... gufuu...<wait><end>
+[38]Eiku...<line>He was a fearsome enemy.<wait more><end>
+[39]But, he started to say something about Master Max...<wait more><end>
+[3A]What was he trying to tell us?<line>This doesn't bode well.<wait><end>
+[3B]Oohh...<line>Is everybody safe?<wait><end>
+[3C]That voice...<delay 01><line>...could it be?!<wait><end>
+[3D]...Grandpa!<delay 01><line>Is it really you?!<wait><end>
+[3E]I was worried this would never end...<delay 02><line>...Cynthia.<wait><end>
+[3F]It's great that we've been reunited.<wait more><end>
+[40]...moreover it's good that our Elder is safe.<wait><end>
+[41]Is that you, Adam?<wait><end>
+[42]I've been confined in this Fortress.<wait more><end>
+[43]I saw a young man with his eyes closed defeat the guard soldier, helping me escape.<wait><end>
+[44]A young man with closed eyes... who could it be..?<wait more><end>
+[45]Could there be someone else confronting the Devil Army, besides us?<wait><end>
+[46]Companions, the shrine! There's no time to lose, we must go!<wait more><end>
+[47]If we don't hurry, the survivors of the Devil Army will break down the support pillars of this Fortress!<wait more><end>
+[48]The Fortress is collapsing... I think we have a problem!<wait><end>
+[49]Indeed.<line><party leader>, make haste!<wait><end>
+
+; Chapter 3, Battle 16
+
+[4A]You dwarves, hurry up!<line>Slaves have no right to take a break!<wait><end>
+[4B]Your eminence, we've received word that the enemy has escaped Eiku's Fortress and will be arriving here before long.<wait more><end>
+[4C]I'm sorry to say that they were not crushed beneath the crumbling Fortress.<wait><end>
+[4D]So... they're already on their way here.<wait more><end>
+[4E]This means Eiku must have performed pitifully.<wait><end>
+[4F]Well, the preparations here are almost finished. It seems we should be able to do this.<wait more><end>
+[50]<party leader>'s surprise appearance may be a good opportunity for us...<wait><end>
+[51]<party leader>, we escaped the collapse of the Fortress by a hair's breadth, didn't we?!<wait><end>
+[52]Ahh, of course the Devil Army are waiting for us here too.<wait more><end>
+[53]It also seems like they've caught some dwarves for slaves, eh?<wait><end>
+[54]For some reason these young, weak dwarves are being used in this valley.<line>But what are they doing?<wait more><end>
+[55]I don't know, but I think we should be cautious in crossing this valley.<wait><end>
+[56]Ah, over there - it's Mishaela.<wait more><end>
+[57]<party leader>, now's your chance to defeat Mishaela for sure!<wait><end>
+
+[58]Experience the terror of the sandworms!<wait><end>
+[59]Oouughh...<delay 02><line>Misha... ugghh<wait><end>
+
+[5A]At last we've defeated Mishaela!<wait more><end>
+[5B]Now all we have to do is find Master Max!<wait><end>
+[5C]It looks like the Devil Army rounded up the Dwarves from their isolated village, against their will, in order to build these things.<wait><end>
+[5D]<end> ; continues 5C
+[5E]Thank you so much, everyone!<wait more><end>
+[5F]It's such a relief that we can now return home by ourselves.<wait><end>
+[60]Oh ho ho ho!<line>You think you've defeated me, but think again!<wait><end>
+[61]Th... that voice!?<wait><end>
+[62]Didn't you think that was a bit too easy, Adam?<wait><end>
+[63]If that's the case...<line>Was the Mishaela we just defeated<delay 02> an impostor?<wait><end>
+[64]Ho ho ho!<line>That was my other self, Mishaela Doll!<wait more><end>
+[65]Did you have fun with my cute little doll!?<wait more><end>
+[66]Thanks for letting me get on with Lord Darksol's revival meanwhile!<wait><end>
+[67]!!!<line>So, that's what it was?<line>And, that's your goal, to revive Darksol?<wait more><end>
+[68]After Dark Dragon was defeated, we saw a shadow escape.<wait more><end>
+[69]That's why we've pursued you here.<wait><end>
+[6A]Our revival of Lord Darksol will be completed at Grans Island. Come and stop me if you can!<wait more><end>
+[6B]He'll be fully revived before long.<line>Ho ho ho ho!<wait more><end>
+[6C]However before that, please accept this token of my appreciation...<wait><end>
+[6D]Look out, Adam!<wait><end>
+[6E]Grandpa!<wait><end>
+[6F]A....Adam... is he safe? Cynthia...?<line>Ugh.... ughhhhhhh....<wait><end>
+[70]Y...yes.<line>Grandpa...<delay 02><line>Grandpa, hold on!<wait><end>
+[71]Elder!<wait><end>
+[72]Oh ho ho... in a little while our plans will be complete. Isn't that wonderful?! <wait more><end>
+[73]I'm going to enjoy defeating you the most!<line>Oh ho ho ho!<wait><end>
+[74]Elder!<wait><end>
+[75]I... I'm already dying.<line>Adam, somehow you have to save this world...<wait><end>
+[76]Elder!<line>You must try to hold on!<wait><end>
+[77]E...Eiku said that the Devil Army's stronghold is in Ground Seal, I'm certain of it.<wait more><end>
+[78]I'm counting on you, Adam.<line><party leader> and Ma... Ugh...<wait><end>
+[79]...Elder...<line>How could such an true and innocent man be dragged into something like this?<wait more><end>
+[7A]Mishaela...<line>I'll absolutely never forgive her for this!<wait><end>
+
+[7B]The Elder died before their very eyes.<wait more><end>
+[7C]The unity of the Shining Force deepens as they hinder the plans of Mishaela and her Devil Army.<wait><end>
+[7D]<end> ; continues 7C
+
+; Chapter 4: The Devil King's Revival
+
+; Chapter 4, Battle 17
+
+[7E]The Shining Force tried to maintain high spirits while in the home town of the rescued dwarves.<wait more><end>
+[7F]The Devil's revival is in nearby Ground Seal, which the Force are heading towards...<wait><end>
+
+[80]After crossing this prairie, we'll reach the governmental City of Galam, the only city on Grans Island.<wait><end>
+[81]<party leader>!<line>You escaped Magus and Eiku, now finally you're here.<wait more><end>
+[82]I must say I have a great respect for the Shining Force, but as I have just arrived, it's customary for me to make the first advance.<wait><end>
+[83]<end> ; continues 82
+[84]You are...!?<wait><end>
+[85]My name is Lynx, and I'm the hard-working Commander of the Devil Army.<wait more><end>
+[86]I hold no grudge against you, it is my job to fight well and it's very important to me.<wait more><end>
+[87]Please, show me your strength.<wait><end>
+
+[88]Lynx!<line>Are your helpers not fighting well enough?<wait><end>
+[89]Mishaela! All this hindrance is unnecessary!<wait more><end>
+[8A]I hope you're not planning to dishonour my battle.<wait><end>
+[8B]Oh ho ho, you never change, Lynx!<line>But in war, the only thing that matters is victory!<wait more><end>
+[8C]So, I'll lend you a hand, Lynx.<line>Come out!<wait><end>
+[8D]So, the rumours of the Shining Force's strange powers were...<wait more><end>
+[8E]If that's the case, perhaps it's possible that you're the only ones who really can defeat Mishaela.<wait><end>
+[8F]Sir Lynx...<wait><end>
+[90]It's futile to have sympathy for one who's been defeated.<wait more><end>
+[91]It seems our group should hand over Ridion. Come out!<wait><end>
+[92]Adam!!<wait><end>
+[93]Ridion?! It can't be!<wait><end>
+[94]Adam, at last we meet again!<wait><end>
+[95]Uughh...<line>A..although Mishaela ordered me to finish him...<wait more><end>
+[96]..I will not kill a person who cannot fight anymore... <line>...uuughhh...<wait><end>
+[97]S... Sir Lynx...<wait><end>
+[98]Master Max and I were defeated in a battle with Sir Lynx.<wait more><end>
+[99]The fight was admirable - absolutely fair and square.<wait><end>
+[9A]So, what happened?<wait><end>
+[9B]After that we were taken to Mishaela's place.<wait more><end>
+[9C]She gave Lynx an order for my death, and Master Max is currently still under Mishaela's supervision.<wait><end>
+[9D]<end> ; continues 9C
+[9E]S... Sir Max is in Ground Seal's ancient tower.<wait more><end>
+[9F]U... unfortunately both Darksol and his opposition, the Devil King Zeon, are both at that place.<wait more><end>
+[A0]Evil power gathers there... and it seems soon they will be celebrating the use of this power!<wait><end>
+[A1]So, they're at the place where the Devil King Zeon is sealed away.<wait more><end>
+[A2]And the evil power is going to be used for the revival of Darksol?<line>What a terrible situation!<wait><end>
+[A3]S...Sir Ridion, you have luck on your side.<delay 02><line>U...uggghhhh...<line>...ughh...<wait><end>
+[A4]...Adam...<line>Let's go to the Ancient Tower and consign Darksol to oblivion.<wait more><end>
+[A5]I may have been saved, but Sir Lynx and his exemplary conduct were not. Don't let his efforts go to waste.<wait><end>
+
+; Chapter 4, Battle 18
+
+[A6]After defeating General Lynx, the Shining Force arrived at Galam city to request an audience with King Galam.<wait><end>
+[A7]<end> ; continues A6
+
+[A8]What?!<line>You defeated the Devil Army's three Generals?!<wait><end>
+[A9]Yes, that's correct.<wait><end>
+[AA]Regrettably, we have a rather more shameful story to tell...<wait more><end>
+[AB]Firstly, the Devil Army repeatedly confronted us too. Although we tried hard, we were eventually defeated.<wait><end>
+[AC]<end> ; continues AB
+[AD]So that's what happened, eh?<wait><end>
+[AE]Now, all my soldiers have been sent out, we have no more soldiers to stand against them.<wait more><end>
+[AF]We'll be forced to sit back and watch as the Devil is revived at the Ancient Tower.<wait more><end>
+[B0]But since you defeated the three Generals, maybe you'll be able to stop them...<wait><end>
+[B1]Ah, here you are, Shining Force!<wait more><end>
+[B2]I thought you'd want to hide.<line>But, I guessed you might want to talk with King Galam, so here we are.<wait more><end>
+[B3]...we need to have a private talk with King Galam, then we'll kill you.<wait><end>
+[B4]King Galam has betrayed us!<line>You'll pay for this with your lives!<wait><end>
+[B5]We'll fight right here, and you'll not be leaving!<wait><end>
+[B6]That's what HE says, but he's wrong!<wait><end>
+
+[B7]You have demonstrated great skill in your fighting technique.<wait more><end>
+[B8]With such skill, surely you can defeat the Devil Army!<wait more><end>
+[B9]Though I do not know if it will be of use to you, I can offer you a sword.<line>Someone bring it to me!<wait><end>
+[BA]Your Highness!<line>Is this the one?<wait><end>
+[BB]It is indeed!<wait><end>
+[BC]We confiscated this sword from a man in the Devil Army.<wait more><end>
+[BD]When doing so, the Devil Army sent for me...<wait><end>
+[BE]Aah!<line>This is, unmistakably, Master Max's sword!<wait more><end>
+[BF]Your Highness, has Master Max been through here?<wait><end>
+[C0]Oh, him?<line>He certainly has!<wait><end>
+[C1]Excellent!<line>Master Max has been here!<wait><end>
+
+
+[C2]<party leader>, this sword possesses the Powers of Light. It's a very important sword.<wait more><end>
+[C3]So, please accept it from His Highness.<wait><end>
+[C4]<party leader> received the Chaos Breaker!<wait><end>
+[C5]Well then, everyone!<wait more><end>
+[C6]Before you face the final battles, it would be best for you to rest in town awhile.<wait><end>
+
+; Chapter 4, Battle 19
+
+[C7]According to King Galam, evil powers gather ahead of here, at Ground Seal.<wait more><end>
+[C8]Master Max is captive in the ancient tower, opposite the rocky mountains over there.<wait more><end>
+[C9]...<party leader>, I'm worried about Master Max. We must make haste!<wait><end>
+[CA]Ah, what a simply magnificent view!<line>First, I'd recommend that you think carefully before you do anything, wouldn't you agree?<wait><end>
+[CB]That voice... it's Mishaela!<wait><end>
+[CC]We were praised as the 'Shining Force' in Galam, and it would seem that our reputation precedes us.<wait more><end>
+[CD]We've made it this far...<wait more><end>
+[CE]...but let's see what awaits us at this prairie.<wait><end>
+[CF]There are a great number of strange orbs on the prairie. What could their purpose be?<wait><end>
+[D0]Oh ho ho!<line>You'd do well to recognise their powers.<wait><end>
+
+[D1]Ah, our enemy on the prairie is just one of Mishaela's dolls.<wait more><end>
+[D2]This is doubtless another trap set by Mishaela - no different than before.<line>Be careful, <party leader>!<wait><end>
+
+[D3]It can't be...<line>Because of those Orbs, our magical powers were continually restored!<wait more><end>
+[D4]It's no wonder everyone in the Devil Army used magic. That was the reason!<wait more><end>
+[D5]Well, it's time we went to find Master Max and stop the Devil's revival!<wait><end>
+
+; Chapter 4, Battle 20
+
+
+[D6]Oh ho ho ho... your battles thus far have been most admirable, <party leader>.<wait more><end>
+[D7]This time, Shining Force, I think your capabilities are really going to be put to the test!<wait more><end>
+[D8]As such, I've carefully prepared a rather interesting plan for you.<wait><end>
+[D9]Come out, Mishaela!<line>You're acting like a coward, as usual. Do you intend to fight us or not?!<wait><end>
+[DA]Oh ho ho, you're certainly strong, I'll admit that much, however...<wait more><end>
+[DB]You'll be no match for him!<wait><end>
+[DC]There's nothing <party leader> and the rest of us fear.<wait><end>
+[DD]*guffaws*<line>Adam, this man would be heartbroken if he heard you talking about him that way.<wait><end>
+[DE]What do you mean?<wait><end>
+[DF]I wonder if he's fully recovered yet? I assume so...<wait more><end>
+[E0]You used to rely on this man!<line>Well, come out!<wait><end>
+[E1]That swordsman's mask....<wait><end>
+[E2]Because of the mask he wears, he's been given the powers of darkness, and become a member of the Devil Army.<wait more><end>
+[E3]By doing this, he's joined his older brother Kane, hasn't he?!<wait more><end>
+[E4]Oh ho ho ho!<line>I think this fight's going to be most enjoyable!<wait><end>
+[E5]Wha... what's this all about?!!<wait><end>
+[E6]You have to try to defeat Max!<wait more><end>
+[E7]Well, Max... take them out!<wait><end>
+
+[E8]It looks like we'll have to fight Master Max...<wait more><end>
+[E9]Master Max, please wait!<line>We'll solve this curse, you'll see!<wait><end>
+[EA]Master Max!<wait><end>
+[EB]Adam tried to remove Max's mask...<wait more><end>
+[EC]...but the mask did not come off.<wait><end>
+
+[ED]That's the Mask of Darkness. You can't remove it, unless you're a Devil.<wait><end>
+[EE]Who are you?<wait><end>
+[EF]I am Odd Eye, but I don't know if that's a good thing for you.<wait more><end>
+[F0]Now I'll remove the mask that covers his face, myself.<wait more><end>
+[F1]This mask is protected by the Powers of Darkness, but it's possible for a Devil to remove it.<wait><end>
+[F2]I'll give it a try...<wait><end>
+[F3]Uuggh....<wait><end>
+[F4]Waaaaaa!<wait><end>
+[F5]The Mask of Darkness that covered Max's face, shattered into tiny pieces.<wait><end>
+
+
+[F6]It seems as if I've been able to help him.<line>So, I shall leave.<wait><end>
+[F7]Please wait a minute!<line>You said the Mask of Darkness could only be removed by a Devil...<wait more><end>
+[F8]That means you're a Devil. So, why did you help Master Max?<wait><end>
+[F9]I am indeed a Devil...<line>My master is Zeon, the King of the Devils.<wait more><end>
+
+[FA]Long ago, my master Zeon was ensnared and sealed beneath the ground.<wait more><end>
+[FB]Darksol is your enemy, and he's my enemy too.<wait><end>
+[FC]...<wait><end>
+[FD]I want him defeated. That's my only purpose.<wait more><end>
+[FE]Feh, I talk too much.<line>Farewell then.<wait><end>
+[FF]Perhaps it was you who helped the Elder to escape from Eiku's fortress...<wait><end>

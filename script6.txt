@@ -1,0 +1,165 @@
+<width 14></center><wrap><border 01>
+
+; Chapter 4, Battle 20 (continued)
+
+[00]A.... Adam...<wait><end>
+[01]I didn't expect the new Shining Force to become so dependable!<wait><end>
+[02]Master Max...<wait more><end>
+[03]<party leader> has guided us so far.<wait><end>
+[04]So, it was you...<wait more><end>
+[05]I'm ashamed to say they put that mask on me when I was defeated in a fight with Lynx.<wait more><end>
+[06]Curses! It can't be that I had the same fate as my brother, Kane!<line>At least we've put an end to it now.<wait><end>
+[07]How could this happen to both Max and Kane...<wait><end>
+[08]...nevertheless, you've skilfully made it this far.<wait more><end>
+[09]I was afraid, but thanks to you it seems like we'll be able to go home.<wait><end>
+[0A]With that much power, <party leader>, perhaps we really can stop the Devil's revival.<wait more><end>
+[0B]<party leader>, may I too join the new Shining Force?<wait><end>
+[0C]That will reassure the group, <party leader>.<line>Well, we should make haste and move on.<wait><end>
+
+; Chapter 4, Battle 21
+
+[0D]This is the place of Lord Darksol's revival...<wait><end>
+[0E]Soon his revival will be completed.<wait more><end>
+[0F]At that time, anyone who stands in his way will be powerless against him!<wait more><end>
+[10]Until then, <party leader> and his force must not be allowed anywhere near Lord Darksol.<wait><end>
+[11]Mistress Mishaela, even if Max is defeated, those guys pose no threat for you.<wait><end>
+[12]<end> ; continues 11
+[13]Well, I won't be defeated!<wait more><end>
+[14]But, I think <party leader> will give us more trouble than Max did.<wait more><end>
+[15]If by some chance they make it here, you must fight with all your strength!<wait><end>
+[16]<party leader> being more troublesome than Max...?<wait><end>
+[17]You should not take <party leader> so lightly. He's a talented man, and will require extra attention when we deal with him...<wait><end>
+[18]Don't think you know <party leader> so well, Mishaela!<wait><end>
+[19]It can't be...!<line>How did those guys get here?!<wait><end>
+[1A]Thanks to <party leader>, I've been able to return to my old self.<wait more><end>
+[1B]I'm sure you don't see how sweet <party leader> is!<wait><end>
+[1C]*guffaws*<line>Well, well, well... isn't this a surprise?!<line>It seems there's something you don't know about <party leader> yet, Max.<wait more><end>
+[1D]20 years ago a prophet in Manarina gave your brother Kane a prediction...<wait><end>
+[1E]What?!<wait><end>
+[1F]That prediction spoke of our reviving Lord Darksol, at this very place.<wait more><end>
+[20]Kane didn't like the thought of that. He had a son, and sent him away to defeat Lord Darksol.<wait more><end>
+[21]...<delay 01><line>and that son was...<delay 02> <party leader>!<wait><end>
+[22]What the...?!<wait><end>
+[23]Kane raised his son to lead a Shining Force, just like you - his brother - led the Shining Force.<wait more><end>
+[24]His son was to follow in your footsteps.<wait><end>
+[25]<party leader>, you...<wait more><end>
+[26]...are my older brother's son?!<wait><end>
+[27]I found out about this through Hassan's Elder, and I was surprised too!<wait more><end>
+[28]Such a thing just can't be, can it?!<wait><end>
+[29]Lord Darksol's revival is almost complete! Oh ho ho ho!<wait more><end>
+[2A]This time, without a doubt, you fools shall not hinder the realisation of our great dream!<wait><end>
+[2B]<end> ; continues 2A
+[2C]Mishaela, you can't do that!<wait more><end>
+[2D]I can't allow you to use Lord Zeon's power in the revival of Darksol.<wait><end>
+[2E]W... who's that?!<wait><end>
+[2F]Y... you're Odd Eye!<wait more><end>
+[30]You're a devil, just like me. How could you have sided with those guys?<wait more><end>
+[31]You can try to hinder us all you like, but it will do no good.<line>I'll risk my life to see Lord Darksol revive completely!<wait><end>
+[32]Mishaela, you need to wake up!<line>Why are you going so far?<wait more><end>
+[33]You're just dazzled by Darksol's illusions.<wait more><end>
+[34]You're putting your life on the line here... will that do you any good?!<wait><end>
+[35]We must protect Lord Darksol's dear child, Mephisto!<wait more><end>
+[36]Compared with that goal, my life isn't important.<wait><end>
+[37]<party leader>! If it's like this, one man alone cannot defeat Mishaela.<wait more><end>
+[38]Darksol's revival must be stopped! I'll join your party.<wait><end>
+[39]Odd Eye the Devil has joined the Force.<wait><end>
+
+[3A]It seems I've been defeated, my magical powers are exhausted...<wait more><end>
+[3B]I must cast away this life for...<delay 02><line>At least...<wait more><end>
+[3C]I'll sacrifice myself for you, Lord Darksol!<wait><end>
+[3D]Mishaela sacrificed her life for Darksol's revival...<wait><end>
+[3E]Mishaela's life has completed the revival of my powers.<wait more><end>
+[3F]Now, take a good look at the true form of Darksol, King of the Devils!<wait><end>
+
+; Chapter 4, Battle 22
+
+[40]L...look over there everyone! Darksol seems to have completed his revival.<wait more><end>
+[41]Prepare yourselves to defeat him!<wait><end>
+
+[42]It can't be!<line>Mere mortals can't have defeated me like this!<wait more><end>
+[43]My revival should have been completed...<line>How...?<wait more><end>
+[44]Something has been holding back my powers, but what...?<wait><end>
+[45]Darksol, the completion of your revival was hindered by the one you personally sealed away...<wait more><end>
+[46]the Devil King, Zeon!<wait><end>
+[47]Ah, I can hear the voice of Goddess Mitula...<wait><end>
+[48]ZEON!!<line>Is that you sealing my powers from deep below?!<wait><end>
+[49]Now, <party leader>! Throw the necklace at Darksol!<wait><end>
+[4A]Ugyaa.....!<wait><end>
+[4B]Darksol falls into the abyss...<wait><end>
+[4C]All members have revived!<wait><end>
+[4D]At last, Darksol is...<wait><end>
+[4E]<party leader>, we defeated him!<wait><end>
+[4F]Master Max, I... I...<wait><end>
+[50]Adam wants to cry!<wait><end>
+[51]Hohoho! Finally, the devil has been defeated!<wait><end>
+[52]First of all, I must express my gratitude to you.<wait more><end>
+[53]But the next time we meet, we are destined to fight, because I am a Devil...<wait><end>
+[54]Odd Eye...<wait><end>
+[55]We must never forget what happened here, not ever... ever...<wait><end>
+[56]Ah, the sun is rising!<wait><end>
+[57]So it is...<wait><end>
+
+; Epilogue
+
+[58]...and so that's what happened, King Galam.<wait><end>
+[59]Splendid work, most admirable!<wait more><end>
+[5A]You really are the Shining Force!<wait><end>
+[5B]But, Darkol's powers are still present in this world.<wait more><end>
+[5C]He's not dead... and his revival must be prevented.<wait more><end>
+[5D]So, <party leader> left this sword, because its powers could offer some protection.<wait><end>
+[5E]King Galam received the Chaos Breaker.<wait><end>
+[5F]This is the ancient sword that Max wielded, and that I awarded you recently, is it not?<wait><end>
+[60]<end> ; continues 5F
+[61]That's correct, your Majesty.<line>This sword possesses the Powers of Light.<wait more><end>
+[62]Please use its powers to protect against the devils' revival.<wait><end>
+[63]I understand completely.<line>So, how about this?<wait more><end>
+[64]Since it's said that Zeon is sealed there too, we'll place this sword in the shrine.<wait more><end>
+[65]Because it possesses the protective Powers of Light, I expect it will supply extra protective strength.<wait><end>
+[66]Many thanks, your Majesty.<wait><end>
+[67]So, after this the sword will be placed in the ancient shrine.<wait more><end>
+[68]The sword will be renamed to 'Force Blade', in honour of all you've done.<line>It's a good idea, don't you think?<wait><end>
+[69]The 'Force Blade'?<line>Thank you, your Majesty, this is indeed a very happy occasion.<wait><end>
+[6A]And now, my children, have you decided on a person to work together with Galam in protecting the Ground Seal?<wait><end>
+[6B]<end> ; continues 6A
+[6C]Yes, we all agreed that this matter should be decided by Ruburan.<wait><end>
+[6D]This man is to become the King of Ground Seal.<wait more><end>
+[6E]He's a more patient man than I, and far more suitable.<line>Allow me to introduce him!<wait><end>
+[6F]Nosshu is honest... and what strength!<wait more><end>
+[70]I mean, he travelled all the way here by himself.<wait more><end>
+[71]He'll certainly become a great King, don't you agree, King Galam?<wait><end>
+[72]B....but, Boss, I'm useless compared with you...<wait><end>
+[73]Everyone has recommended that I make the decision, and I choose you, Nosshu.<wait more><end>
+[74]I don't expect anyone would disagree that you'll make a good King, isn't that right?<wait><end>
+[75]Well, if it's the decision of the Shining Force, then who am I to refuse it?<wait><end>
+[76]<end> ; continues 75
+[77]Yahoo!<line>It's decided, it's decided!<line>Nosshu will be the King!<wait><end>
+[78]Isn't it great, Nosshu?!<wait more><end>
+[79]If you hadn't shown up when we faced the Kraken, I don't know what we would have done.<wait more><end>
+[7A]Nosshu... you'll really become a good King.<wait><end>
+[7B]...Y... yes, boss!<wait><end>
+[7C]Nosshu, congratulations on being the founder of Ground Seal!<wait more><end>
+[7D]If you need help, I'll be here for you.<wait><end>
+[7E]Huh?!<wait><end>
+[7F]There are many things I'd like to look into, following our victory over the terrible crisis.<wait more><end>
+[80]The existence of devils and the seals... the purpose of Light.<wait more><end>
+[81]I'd like to investigate the value of some of these phenomenon, there's a lot to learn!<wait><end>
+[82]Ah, once again we see the scholar's curiosity in Hawel!<wait more><end>
+[83]Hawel, do your best!<line>Together with Nosshu you'll make a magnificent country.<wait><end>
+[84]Uh-huh, Sonette, I'll do my best!<wait><end>
+[85]Good....<delay 01> but everyone must try their hardest now that <party leader>, Max and Adam aren't here anymore.<wait more><end>
+[86]Where did those guys go, anyway?<wait><end>
+[87]You're right... where did they all go?<wait><end>
+[88]Even Odd Eye fought alongside us.<wait more><end>
+[89]Everyone joined together, and for the first time we really were the Shining Force...<wait><end>
+[8A]But, I think I can understand more or less how <party leader> and the others must be feeling.<wait more><end>
+[8B]As a man, I feel that now is the time for my own preparations... I want to travel too!<wait><end>
+[8C]What?! Knuckles, you'd just sleep in late while everyone else left without you...<wait><end>
+[8D]<end> ; continues 8C
+[8E]I, for one, am sure they'll come back to us someday.<wait more><end>
+[8F]Someday, without a doubt...<wait><end>
+
+[90]Mephisto, this is the place where your parents sleep.<wait more><end>
+[91]Take a good look at it, and remember it well...<wait><end>
+[92]Waaah waaaah!<wait><end>
+[93]There, there now, Mephisto. Don't cry.<wait more><end>
+[94]Well, Mephisto... we must go quietly to the place where our comrades wait.<wait><end>
