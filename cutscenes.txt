@@ -26,11 +26,11 @@ Params :
 - byte : Y Pos
 - byte : some incremented index ? Entities with $80 index start from $0C ?
 
-$15 - Set Facing ?
+$15 - Set Facing
 Length = 3 bytes 
 Params :
 - byte : entity index
-- byte : facing ?
+- byte : facing
 
 $43 - Load Map
 Length = 4 bytes
@@ -81,7 +81,7 @@ No params.
 
 $50 - Move Sequence
 - One or multiple entities declared
-- For each entity, the move sequence ended with value $C0
+- For each entity, the move sequence, ended with value $C0 or $D0
 Move commands to document.
 
 $32 - Display portrait
