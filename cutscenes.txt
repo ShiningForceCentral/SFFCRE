@@ -64,20 +64,18 @@ No params
 $54 - ?
 Length = 2 bytes
 
-$06 - Initialize text cursor ?
-Length = 3 bytes
+$06 - Initialize text cursor
 Params :
-- byte : line index ?
-- byte : bank index ?
+- byte : line index
+- byte : bank index
 
 $04 - Sound command
-Length = 2 bytes
+Music/SFX index.
+$FD = fade out
 Params :
 - byte : sound command
 
 $45 - Map fade in
-Intro : music starts and map fades in after this command.
-No params.
 
 $50 - Move Sequence
 - One or multiple entities declared
@@ -102,9 +100,9 @@ Params :
 - byte : Camera Dest X
 - byte : Camera Dest Y
 
-$14 - Wait ?
+$14 - Wait
 Params : 
-- byte : Wait duration ?
+- byte : Duration
 
 $02 - Display next text line
 No params.
@@ -122,10 +120,6 @@ Params :
 $3F - Flash white
 Params : 
 - byte : Number of flashes
-
-$04 - ?
-Params : 
-- byte : ? $42, $41 after white flash
 
 $3A - Entity Jump
 Params : 
@@ -153,7 +147,7 @@ Params :
 - byte : $08
 - byte : $1E
 
-$36 - Rotate and shrink ?
+$36 - Rotate and shrink
 Params :
 - byte : Entity index
 - byte : Rotate value
