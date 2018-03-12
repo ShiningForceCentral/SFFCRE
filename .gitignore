@@ -1,3 +1,4 @@
+*.gg
 *.bak
 nbproject/private/*
 build/*
