@@ -59,7 +59,7 @@ Params :
 - byte : Number of entities for the next move sequence.
 
 $53 - ?
-No params
+Length = 2 bytes
 
 $54 - ?
 Length = 2 bytes
