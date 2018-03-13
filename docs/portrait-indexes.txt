@@ -18,11 +18,11 @@ $0F : Ridion
 $10 : 
 $11 : Max
 $12 : 
-$13 : 
-$14 : 
-$15 : 
+$13 : Magus
+$14 : Eiku
+$15 : Lynx
 $16 : 
-$17 : 
+$17 : Mishaela
 $18 : 
 $19 : 
 $1A : Adam
@@ -32,11 +32,3 @@ $1D :
 $1E : 
 $1F : 
       
-      
-$4F : Ridion          
-
-$53 : Magus
-$54 : Eiku
-$55 : Lynx
-
-$57 : Mishaela

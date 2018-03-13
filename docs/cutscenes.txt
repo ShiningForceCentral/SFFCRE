@@ -16,7 +16,7 @@ $2A - Initialize Entity
 Length = 3 bytes
 Params : 
 - byte : entity index
-- byte : entiy sprite
+- byte : sprite index
 
 $2B - Initialize entity position ?
 Length = 5 bytes
