@@ -21,8 +21,7 @@ public class Sf2DisasmManager {
     
     private static StringBuilder sb;
     private static int moveSequenceEntityNumber = 0;
-    private static Map<Integer,Entity> entities;
-    private static Map<Integer,Entity> initialEntities;
+    private static Entity[] entities;
     private static int portraitIndex;
     private static int portraitParams;
 
@@ -56,7 +55,7 @@ public class Sf2DisasmManager {
     
     private static String convert(Cutscene cutscene){
         sb = new StringBuilder();
-        entities = new HashMap<Integer,Entity>();
+        entities = new Entity[256];
         byte[] data = cutscene.getData();
         int cursor = 0;
         byte b = data[cursor];
@@ -122,7 +121,7 @@ public class Sf2DisasmManager {
                     break;
                 
                 case(0x8):
-                    sb.append("    command " 
+                    sb.append("    ; command " 
                                 + Integer.toHexString(data[cursor]&0xFF) + " "
                                 + Integer.toHexString(data[cursor+1]&0xFF) + " "
                                 + Integer.toHexString(data[cursor+2]&0xFF) + " "
@@ -141,7 +140,7 @@ public class Sf2DisasmManager {
                 case(0xA):
                     String subroutineOffset = Integer.toHexString(data[cursor+2]&0xFF)
                             + Integer.toHexString(data[cursor+1]&0xFF);
-                    sb.append("    executeSubroutine 0x"+subroutineOffset);
+                    sb.append("    ; executeSubroutine 0x"+subroutineOffset);
                     l=3;
                     sb.append("\n");
                     break;
@@ -153,7 +152,7 @@ public class Sf2DisasmManager {
                     break;
                 
                 case(0xC):
-                    sb.append("    command " 
+                    sb.append("    ; command " 
                                 + Integer.toHexString(data[cursor]&0xFF) + " "
                                 + Integer.toHexString(data[cursor+1]&0xFF) + " "
                                 + Integer.toHexString(data[cursor+2]&0xFF) + " "
@@ -218,13 +217,13 @@ public class Sf2DisasmManager {
                 case(0x15):
                     entityIndex = data[cursor+1]&0xFF;
                     facing = data[cursor+2]&0xFF;
-                    entity = entities.get(entityIndex);
+                    entity = entities[entityIndex];
                     if(entity!=null){
                         entity.setFacing(facing);
                     }else{
                         Entity newEntity = new Entity();
                         newEntity.setFacing(facing);
-                        entities.put(entityIndex, newEntity);
+                        entities[entityIndex] =  newEntity;
                     }
                     sb.append("    setFacing $"+Integer.toHexString(data[cursor+1]&0xFF)
                                             + "," + getFacing(data[cursor+2]&0xFF));
@@ -305,7 +304,7 @@ public class Sf2DisasmManager {
                 
                 case(0x1E):
                     entityIndex = data[cursor+1]&0xFF;
-                    entity = entities.get(entityIndex);
+                    entity = entities[entityIndex];
                     if(entity!=null){
                         facing = entity.getFacing();
                         comment = "";
@@ -388,13 +387,21 @@ public class Sf2DisasmManager {
                     break;
                 
                 case(0x2A):
+                    entityIndex = data[cursor+1]&0xFF;
+                    entity = new Entity();
+                    entity.setIndex(entityIndex);
+                    entity.setSprite(data[cursor+2]&0xFF);
+                    entity.setX(63);
+                    entity.setY(63);
+                    entity.setFacing(3);
+                    entities[entityIndex] = entity;                    
                     sb.append("    newEntity $"+Integer.toHexString(data[cursor+1]&0xFF)
                                             + ",63"
                                             + ",63"
                                             + ",DOWN"
                                             + "," + Integer.toString(data[cursor+2]&0xFF));
-                    sb.append("\n    setActscript $"+Integer.toHexString(data[cursor+1]&0xFF)
-                                            + ",eas_Init");
+                    /* sb.append("\n    setActscript $"+Integer.toHexString(data[cursor+1]&0xFF)
+                                            + ",eas_Init"); */
                     l=3;
                     sb.append("\n");
                     break;
@@ -405,19 +412,25 @@ public class Sf2DisasmManager {
                                             + "," + Integer.toString(data[cursor+3]&0xFF)
                                             + ",$" + Integer.toHexString(data[cursor+4]&0xFF));*/
                     entityIndex = data[cursor+1]&0xFF;
-                    entity = entities.get(entityIndex);
+                    entity = entities[entityIndex];
                     if(entity!=null){
                         facing = entity.getFacing();
-                        comment = "";
+                        sb.append("    setPos $"+Integer.toHexString(data[cursor+1]&0xFF)
+                                                + "," + Integer.toString(data[cursor+2]&0xFF)
+                                                + "," + Integer.toString(data[cursor+3]&0xFF)
+                                                + "," + getFacing(facing)); 
                     } else{
+                        entity = new Entity();
                         facing = 3;
-                        comment = " ; conversion could not get entity's current facing, set DOWN by default";
-                    }
-                    sb.append("    setPos $"+Integer.toHexString(data[cursor+1]&0xFF)
-                                            + "," + Integer.toString(data[cursor+2]&0xFF)
-                                            + "," + Integer.toString(data[cursor+3]&0xFF)
-                                            + "," + getFacing(facing)
-                                            + comment);                    
+                        entity.setFacing(facing);
+                        entities[entityIndex] = entity;
+                        comment = " ; default direction";
+                        sb.append("    newEntity $"+Integer.toHexString(data[cursor+1]&0xFF)
+                                                + "," + Integer.toString(data[cursor+2]&0xFF)
+                                                + "," + Integer.toString(data[cursor+3]&0xFF)
+                                                + "," + getFacing(facing)
+                                                + "," + entityIndex); 
+                    }                   
                     l=5;
                     sb.append("\n");
                     break;
@@ -552,7 +565,7 @@ public class Sf2DisasmManager {
                     break;
                 
                 case(0x3D):
-                    sb.append("    setBlocks "+Integer.toHexString(data[cursor+1]&0xFF)
+                    sb.append("    setBlocks "+Integer.toString(data[cursor+1]&0xFF)
                                             + "," + Integer.toString(data[cursor+2]&0xFF)
                                             + "," + Integer.toString(data[cursor+3]&0xFF)
                                             + "," + Integer.toString(data[cursor+4]&0xFF)
@@ -571,7 +584,7 @@ public class Sf2DisasmManager {
                 case(0x3F):
                     int flashNumber = data[cursor+1]&0xFF;
                     for(int i=0;i<flashNumber;i++){
-                        sb.append("    flashWhite 10\n");
+                        sb.append("    flashScreenWhite 10\n");
                         sb.append("    csWait 2\n");
                     }
                     l=2;
@@ -596,7 +609,7 @@ public class Sf2DisasmManager {
                     break;
                 
                 case(0x43):
-                    sb.append("    loadMapFadeIn "+Integer.toString(data[cursor+1]&0xFF)
+                    sb.append("    mapLoad "+Integer.toString(data[cursor+1]&0xFF)
                                             + "," + Integer.toString(data[cursor+2]&0xFF)
                                             + "," + Integer.toString(data[cursor+3]&0xFF));
                     l=4;
@@ -684,9 +697,8 @@ public class Sf2DisasmManager {
                     break;
                 
                 case(0x50):
-                    sb.append("    moveSequence ");
+                    /* sb.append("    moveSequence "); */
                     l = parseMoveSequence(data,cursor);
-                    sb.append("\n");
                     break;
                 
                 case(0x51):
@@ -795,7 +807,7 @@ public class Sf2DisasmManager {
         }
         
         
-        sb.append("    csEnd");
+        sb.append("    csc_end");
         
         
         
@@ -824,725 +836,752 @@ public class Sf2DisasmManager {
         int cursor = start + 1;
         cursor+=moveSequenceEntityNumber;
         for(int i=0;i<moveSequenceEntityNumber;i++){
-            sb.append("\n");
-            sb.append("     entity "+Integer.toHexString(data[start+1+i]&0xFF));
+            if(i==moveSequenceEntityNumber-1){
+                sb.append("    entityActionsWait $"+Integer.toHexString(data[start+1+i]&0xFF));
+            }else{
+                sb.append("    entityActions $"+Integer.toHexString(data[start+1+i]&0xFF));
+            }
+            
             int moveCommand = data[cursor];
+            int jumpNumber;
             while((moveCommand & 0xC0)!=0xC0){
                 sb.append("\n");
                 switch(data[cursor]&0xFF){
                     case 0x0:
-                        sb.append("      Go RIGHT "+Integer.toString(data[cursor+1]&0xFF)+" blocks");
+                        /* sb.append("      Go RIGHT "+Integer.toString(data[cursor+1]&0xFF)+" blocks"); */
+                        sb.append("      moveRight "+Integer.toString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x1:
-                        sb.append("      Go UP "+Integer.toString(data[cursor+1]&0xFF)+" blocks");
+                        /* sb.append("      Go UP "+Integer.toString(data[cursor+1]&0xFF)+" blocks"); */
+                        sb.append("      moveUp "+Integer.toString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x2:
-                        sb.append("      Go LEFT "+Integer.toString(data[cursor+1]&0xFF)+" blocks");
+                        /* sb.append("      Go LEFT "+Integer.toString(data[cursor+1]&0xFF)+" blocks"); */
+                        sb.append("      moveLeft "+Integer.toString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x3:
-                        sb.append("      Go DOWN "+Integer.toString(data[cursor+1]&0xFF)+" blocks");
+                        /* sb.append("      Go DOWN "+Integer.toString(data[cursor+1]&0xFF)+" blocks"); */
+                        sb.append("      moveDown "+Integer.toString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x4:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x5:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x6:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x7:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x8:
-                        sb.append("      Quick move "+Integer.toString(data[cursor+1]&0xFF)+" blocks");
+                        /* sb.append("      Quick move "+Integer.toString(data[cursor+1]&0xFF)+" blocks"); */
+                        sb.append("      moveRight "+Integer.toString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x9:
-                        sb.append("      Quick move "+Integer.toString(data[cursor+1]&0xFF)+" blocks");
+                        /* sb.append("      Quick move "+Integer.toString(data[cursor+1]&0xFF)+" blocks"); */
+                        sb.append("      moveUp "+Integer.toString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0xA:
-                        sb.append("      Quick move "+Integer.toString(data[cursor+1]&0xFF)+" blocks");
+                        /* sb.append("      Quick move "+Integer.toString(data[cursor+1]&0xFF)+" blocks"); */
+                        sb.append("      moveLeft "+Integer.toString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0xB:
-                        sb.append("      Quick move "+Integer.toString(data[cursor+1]&0xFF)+" blocks");
+                        /* sb.append("      Quick move "+Integer.toString(data[cursor+1]&0xFF)+" blocks"); */
+                        sb.append("      moveDown "+Integer.toString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0xC:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0xD:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0xE:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0xF:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x10:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x11:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x12:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x13:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x14:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x15:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x16:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x17:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x18:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x19:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x1A:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x1B:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x1C:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x1D:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x1E:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x1F:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x20:
-                        sb.append("      Jump RIGHT "+Integer.toString(data[cursor+1]&0xFF)+" times");
+                        jumpNumber = data[cursor+1]&0xFF;
+                        /* sb.append("      Jump RIGHT "+Integer.toString(data[cursor+1]&0xFF)+" times"); */
+                        sb.append("      jumpRight "+jumpNumber);
                         break;
                         
                     case 0x21:
-                        sb.append("      Jump UP "+Integer.toString(data[cursor+1]&0xFF)+" times");
+                        jumpNumber = data[cursor+1]&0xFF;
+                        /* sb.append("      Jump UP "+Integer.toString(data[cursor+1]&0xFF)+" times"); */
+                        sb.append("      jumpUp "+jumpNumber);
                         break;
                         
                     case 0x22:
-                        sb.append("      Jump LEFT "+Integer.toString(data[cursor+1]&0xFF)+" times");
+                        jumpNumber = data[cursor+1]&0xFF;
+                        /* sb.append("      Jump LEFT "+Integer.toString(data[cursor+1]&0xFF)+" times"); */
+                        sb.append("      jumpLeft "+jumpNumber);
                         break;
                         
                     case 0x23:
-                        sb.append("      Jump DOWN "+Integer.toString(data[cursor+1]&0xFF)+" times");
+                        jumpNumber = data[cursor+1]&0xFF;
+                        /* sb.append("      Jump DOWN "+Integer.toString(data[cursor+1]&0xFF)+" times"); */
+                        sb.append("      ; jump down to implement ! "+jumpNumber);
                         break;
                         
                     case 0x24:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x25:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x26:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x27:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x28:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x29:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x2A:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x2B:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x2C:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x2D:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x2E:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x2F:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x30:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x31:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x32:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x33:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x34:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x35:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x36:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x37:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x38:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x39:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x3A:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x3B:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x3C:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x3D:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x3E:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x3F:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x40:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x41:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x42:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x43:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x44:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x45:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x46:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x47:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x48:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x49:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x4A:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x4B:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x4C:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x4D:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x4E:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x4F:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x50:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x51:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x52:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x53:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x54:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x55:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x56:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x57:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x58:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x59:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x5A:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x5B:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x5C:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x5D:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x5E:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x5F:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x60:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x61:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x62:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x63:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x64:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x65:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x66:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x67:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x68:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x69:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x6A:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x6B:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x6C:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x6D:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x6E:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x6F:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x70:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x71:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x72:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x73:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x74:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x75:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x76:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x77:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x78:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x79:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x7A:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x7B:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x7C:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x7D:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x7E:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x7F:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x80:
-                        sb.append("      Face RIGHT and wait " + Integer.toHexString(data[cursor+1]&0xFF)+" block moves");
+                        /* sb.append("      Face RIGHT and wait " + Integer.toHexString(data[cursor+1]&0xFF)+" block moves"); */
+                        sb.append("      faceRight "+Integer.toString((data[cursor+1]&0xFF)*20));
                         break;
                         
                     case 0x81:
-                        sb.append("      Face UP and wait " + Integer.toHexString(data[cursor+1]&0xFF)+" block moves");
+                        /* sb.append("      Face UP and wait " + Integer.toHexString(data[cursor+1]&0xFF)+" block moves"); */
+                        sb.append("      faceUp "+Integer.toString((data[cursor+1]&0xFF)*20));
                         break;
                         
                     case 0x82:
-                        sb.append("      Face LEFT and wait " + Integer.toHexString(data[cursor+1]&0xFF)+" block moves");
+                        /* sb.append("      Face LEFT and wait " + Integer.toHexString(data[cursor+1]&0xFF)+" block moves"); */
+                        sb.append("      faceLeft "+Integer.toString((data[cursor+1]&0xFF)*20));
                         break;
                         
                     case 0x83:
-                        sb.append("      Face DOWN and wait " + Integer.toHexString(data[cursor+1]&0xFF)+" block moves");
+                        /* sb.append("      Face DOWN and wait " + Integer.toHexString(data[cursor+1]&0xFF)+" block moves"); */
+                        sb.append("      faceDown "+Integer.toString((data[cursor+1]&0xFF)*20));
                         break;
                         
                     case 0x84:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x85:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x86:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x87:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x88:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x89:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x8A:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x8B:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x8C:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x8D:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x8E:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     case 0x8F:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                 + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                         
                     default:
-                        sb.append("      unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
+                        sb.append("      ; unknownMoveCommand "+Integer.toHexString(data[cursor]&0xFF)
                                             + " " + Integer.toHexString(data[cursor+1]&0xFF));
                         break;
                 }
                 cursor+=2;
                 moveCommand = data[cursor];
             }
+            sb.append("\n    endActions");
             cursor++;
+            sb.append("\n");
         }
         length = cursor-start;
         return length;
