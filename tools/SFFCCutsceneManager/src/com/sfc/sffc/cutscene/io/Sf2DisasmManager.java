@@ -19,16 +19,24 @@ import java.util.logging.Logger;
  */
 public class Sf2DisasmManager {
     
+    private static final int[] mapIndexes = {12, 9, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
+    private static final int textShift = 0x200;
+    
     private static StringBuilder sb;
     private static int moveSequenceEntityNumber = 0;
     private static Entity[] entities;
     private static int portraitIndex;
     private static int portraitParams;
+    private static int xShift;
+    private static int yShift;
 
-    public static void exportCutscene(Cutscene cutscene, String filePath){
+    public static void exportCutscene(Cutscene cutscene, String filePath, int xShft, int yShft){
         System.out.println("com.sfc.sffc.cutscene.io.DisassemblyManager.exportCutscene() - Exporting SF2DISASM cutscene ...");
         try {
 
+            xShift = xShft;
+            yShift = yShft;
+            
             System.out.println("data = " + bytesToHex(cutscene.getData()));
             
             String sf2DisasmCutscene = convert(cutscene);
@@ -109,7 +117,7 @@ public class Sf2DisasmManager {
                 
                 case(0x6):
                     int lineIndex = (data[cursor+1]&0xFF) + (256 * ((data[cursor+2]&0xFF) -1));
-                    sb.append("    textCursor $"+Integer.toHexString(lineIndex));
+                    sb.append("    textCursor $"+Integer.toHexString(lineIndex+textShift));
                     l=3;
                     sb.append("\n");
                     break;
@@ -232,8 +240,8 @@ public class Sf2DisasmManager {
                     break;
                 
                 case(0x16):
-                    sb.append("    setCamDest "+Integer.toString(data[cursor+1]&0xFF)
-                                            + "," + Integer.toString(data[cursor+2]&0xFF));
+                    sb.append("    setCamDest "+Integer.toString((data[cursor+1]&0xFF)+xShift)
+                                            + "," + Integer.toString((data[cursor+2]&0xFF)+yShift));
                     l=3;
                     sb.append("\n");
                     break;
@@ -313,8 +321,8 @@ public class Sf2DisasmManager {
                         comment = " ; conversion could not get entity's current facing, set DOWN by default";
                     }
                     sb.append("    setPos $"+Integer.toHexString(data[cursor+1]&0xFF)
-                                            + "," + Integer.toString(data[cursor+2]&0xFF)
-                                            + "," + Integer.toString(data[cursor+3]&0xFF)
+                                            + "," + Integer.toString((data[cursor+2]&0xFF)+xShift)
+                                            + "," + Integer.toString((data[cursor+3]&0xFF)+yShift)
                                             + "," + getFacing(facing)
                                             + comment);
                     l=4;
@@ -416,8 +424,8 @@ public class Sf2DisasmManager {
                     if(entity!=null){
                         facing = entity.getFacing();
                         sb.append("    setPos $"+Integer.toHexString(data[cursor+1]&0xFF)
-                                                + "," + Integer.toString(data[cursor+2]&0xFF)
-                                                + "," + Integer.toString(data[cursor+3]&0xFF)
+                                                + "," + Integer.toString((data[cursor+2]&0xFF)+xShift)
+                                                + "," + Integer.toString((data[cursor+3]&0xFF)+yShift)
                                                 + "," + getFacing(facing)); 
                     } else{
                         entity = new Entity();
@@ -426,8 +434,8 @@ public class Sf2DisasmManager {
                         entities[entityIndex] = entity;
                         comment = " ; default direction";
                         sb.append("    newEntity $"+Integer.toHexString(data[cursor+1]&0xFF)
-                                                + "," + Integer.toString(data[cursor+2]&0xFF)
-                                                + "," + Integer.toString(data[cursor+3]&0xFF)
+                                                + "," + Integer.toString((data[cursor+2]&0xFF)+xShift)
+                                                + "," + Integer.toString((data[cursor+3]&0xFF)+xShift)
                                                 + "," + getFacing(facing)
                                                 + "," + entityIndex); 
                     }                   
@@ -565,12 +573,12 @@ public class Sf2DisasmManager {
                     break;
                 
                 case(0x3D):
-                    sb.append("    setBlocks "+Integer.toString(data[cursor+1]&0xFF)
-                                            + "," + Integer.toString(data[cursor+2]&0xFF)
+                    sb.append("    setBlocks "+Integer.toString((data[cursor+1]&0xFF)+xShift)
+                                            + "," + Integer.toString((data[cursor+2]&0xFF)+yShift)
                                             + "," + Integer.toString(data[cursor+3]&0xFF)
                                             + "," + Integer.toString(data[cursor+4]&0xFF)
-                                            + "," + Integer.toString(data[cursor+5]&0xFF)
-                                            + "," + Integer.toString(data[cursor+6]&0xFF));
+                                            + "," + Integer.toString((data[cursor+5]&0xFF)+xShift)
+                                            + "," + Integer.toString((data[cursor+6]&0xFF)+yShift));
                     l=7;
                     sb.append("\n");
                     break;
@@ -609,9 +617,9 @@ public class Sf2DisasmManager {
                     break;
                 
                 case(0x43):
-                    sb.append("    mapLoad "+Integer.toString(data[cursor+1]&0xFF)
-                                            + "," + Integer.toString(data[cursor+2]&0xFF)
-                                            + "," + Integer.toString(data[cursor+3]&0xFF));
+                    sb.append("    mapLoad "+Integer.toString(getConvertedMapIndex(data[cursor+1]&0xFF))
+                                            + "," + Integer.toString((data[cursor+2]&0xFF)+xShift)
+                                            + "," + Integer.toString((data[cursor+3]&0xFF)+yShift));
                     l=4;
                     sb.append("\n");
                     break;
@@ -1587,7 +1595,14 @@ public class Sf2DisasmManager {
         return length;
     }
     
-    
+    private static int getConvertedMapIndex(int mapIndex){
+        int newMapIndex = mapIndexes[mapIndex];
+        if(newMapIndex!=-1){
+            return newMapIndex;
+        }else{
+            return mapIndex;
+        }
+    }
     
     
 }

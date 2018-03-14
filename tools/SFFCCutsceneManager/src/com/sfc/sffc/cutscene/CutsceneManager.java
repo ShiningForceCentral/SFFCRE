@@ -23,9 +23,9 @@ public class CutsceneManager {
         System.out.println("com.sfc.sffc.cutscene.CutsceneManager.importDisassembly() - Disassembly imported.");
     }
     
-    public void exportSf2Disasm(String filePath){
+    public void exportSf2Disasm(String filePath, int xShift, int yShift){
         System.out.println("com.sfc.sffc.cutscene.CutsceneManager.exportSf2Disasm() - Exporting SF2DISASM cutscene ...");
-        Sf2DisasmManager.exportCutscene(cutscene, filePath);
+        Sf2DisasmManager.exportCutscene(cutscene, filePath, xShift, yShift);
         System.out.println("com.sfc.sffc.cutscene.CutsceneManager.exportSf2Disasm() - SF2DISASM cutscene exported.");
     }
     
